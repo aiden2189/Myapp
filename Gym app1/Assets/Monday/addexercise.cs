@@ -11,7 +11,7 @@ public class addexercise : MonoBehaviour
     public float count;
     public void NewGameButton()
     {
-        if (count < 10)
+        if (count < 9)
         {
             count = count + 1;
             x = x + 400;
