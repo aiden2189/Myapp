@@ -5,17 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class monday1 : MonoBehaviour
 {
-
-    public GameObject Canvas;
-    public void NewGameButton()
+    public void playGame()
     {
-
-        foreach (Transform child in Canvas.GetComponentsInChildren<Transform>(true))
-        {
-            child.gameObject.layer = LayerMask.NameToLayer("onscreen"); 
-        }
-
+        SceneManager.LoadScene(1);
+    }
+    public void Back()
+    {
+        SceneManager.LoadScene(0);
     }
 }
-//int Layeroffscreen = LayerMask.NameToLayer("offscreen");
-//gameObject.layer = Layeroffscreen;
