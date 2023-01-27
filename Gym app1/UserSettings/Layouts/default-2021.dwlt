@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 86
+  controlID: 98
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 466.40002
     height: 730.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 87
+  controlID: 70
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 88
+  controlID: 71
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +306,8 @@ MonoBehaviour:
     m_SaveData: []
   m_SearchFilter:
     m_NameFilter: 
-    m_ClassNames: []
+    m_ClassNames:
+    - Prefab
     m_AssetLabels: []
     m_AssetBundleNames: []
     m_VersionControlStates: []
@@ -316,23 +317,22 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Monday
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Monday
+  - Packages
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\23290\Documents\GitHub\Myapp\Gym app1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ba630000
-    m_LastClickedID: 25530
-    m_ExpandedIDs: 0000000096630000986300009a6300009c6300009e630000a0630000a263000000ca9a3b
+    m_SelectedIDs: 04ca9a3b
+    m_LastClickedID: 1000000004
+    m_ExpandedIDs: 0000000090630000926300009463000096630000986300009a6300009c630000c8700000ca7a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -348,7 +348,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000096630000986300009a6300009c6300009e630000a0630000a2630000
+    m_ExpandedIDs: 0000000090630000926300009463000096630000986300009a6300009c630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,9 +488,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 9c900000
       m_LastClickedID: 0
-      m_ExpandedIDs: acaeffffb6bdffff5ac3ffffeec5ffffe4caffff92e6fffffeedffff2afbffff30620000b8620000
+      m_ExpandedIDs: 84b5ffff84bdffff56c0ffff26c3ffffe4cbffffc6cdffff46d8ffff7ed9ffff86ddffff5edfffffdcdfffff68e0ffffc8e0ffff10e1ffff70e1ffffb8e1ffff18e2ffff72e2ffffdae2ffff22e3ffff82e3ffffcae3ffff2ae4ffff72e4ffffc8e6ffff86f0ffffcef0ffff60f2ffffc2f2ffff08f3ffff66f3ffffacf3ffff306200009e6200004a630000467e0000227f0000907f0000548400002e8b0000488d0000d08e0000ea8e0000048f0000268f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -506,7 +506,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -646,9 +646,9 @@ MonoBehaviour:
       floating: 1
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 134}
+      snapOffset: {x: 0, y: -228.4}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 2
       id: Scene View/Camera
       index: 1
       layout: 4
@@ -761,9 +761,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.9854827, y: -0.19189447, z: -0.013619639}
+    m_Target: {x: -1.7523162, y: 0.008359667, z: 0.094850555}
     speed: 2
-    m_Value: {x: 1.9854827, y: -0.19189447, z: -0.013619639}
+    m_Value: {x: -1.7523162, y: 0.008359667, z: 0.094850555}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -814,9 +814,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.323693
+    m_Target: 0.10474572
     speed: 2
-    m_Value: 7.323693
+    m_Value: 0.10474572
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -927,7 +927,7 @@ MonoBehaviour:
     scale: 13
     fitToScreenEnabled: 1
     rotationDegree: 0
-    highlightSafeAreaEnabled: 0
+    highlightSafeAreaEnabled: 1
     friendlyName: Apple iPhone 12 mini
     networkReachability: 1
     systemLanguage: 10

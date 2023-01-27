@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Destroybutton : MonoBehaviour
 {
-    [SerializeField] GameObject edit1;
+    [SerializeField] Editbutton edit1;
     public void destroy()
     {
         if (edit1.edit2 == true)
