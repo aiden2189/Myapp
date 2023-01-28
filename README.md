@@ -1,2 +1,2 @@
 # Myapp
-app
+A gym app to track work outs 
