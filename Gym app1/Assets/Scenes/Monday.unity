@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 796131809}
   - component: {fileID: 796131808}
   - component: {fileID: 796131807}
+  - component: {fileID: 796131810}
   m_Layer: 8
   m_Name: Edit
   m_TagString: Untagged
@@ -291,7 +292,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1800827406}
+      - m_Target: {fileID: 796131810}
         m_TargetAssemblyTypeName: Editbutton, Assembly-CSharp
         m_MethodName: edit
         m_Mode: 1
@@ -341,6 +342,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796131805}
   m_CullTransparentMesh: 1
+--- !u!114 &796131810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796131805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d535dcb0f492c4741b0412261a09340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edit2: 0
 --- !u!1 &915639244
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +367,7 @@ GameObject:
   - component: {fileID: 915639249}
   - component: {fileID: 915639248}
   - component: {fileID: 915639247}
+  - component: {fileID: 915639250}
   m_Layer: 8
   m_Name: AddExercise
   m_TagString: Untagged
@@ -425,7 +440,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1800827404}
+      - m_Target: {fileID: 915639250}
         m_TargetAssemblyTypeName: addexercise, Assembly-CSharp
         m_MethodName: NewGameButton
         m_Mode: 1
@@ -475,6 +490,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915639244}
   m_CullTransparentMesh: 1
+--- !u!114 &915639250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915639244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e130cd573fd36fe4e8996d424a64e022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exercise: {fileID: 4328497260573346144, guid: 61e763869c3844d4187bf28425170cf9, type: 3}
+  canvas: {fileID: 1800827398}
+  x: -800
+  y: 0
+  count: 0
 --- !u!1 &1278113928
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,8 +931,6 @@ GameObject:
   - component: {fileID: 1800827401}
   - component: {fileID: 1800827400}
   - component: {fileID: 1800827399}
-  - component: {fileID: 1800827404}
-  - component: {fileID: 1800827406}
   m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
@@ -991,33 +1021,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1800827404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800827398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e130cd573fd36fe4e8996d424a64e022, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exercise: {fileID: 4328497260573346144, guid: 61e763869c3844d4187bf28425170cf9, type: 3}
-  canvas: {fileID: 1800827398}
-  x: -800
-  y: 0
-  count: 0
---- !u!114 &1800827406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800827398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d535dcb0f492c4741b0412261a09340b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  edit2: 0

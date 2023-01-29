@@ -7,6 +7,6 @@ public class Button : MonoBehaviour
     public Button button;
     public void adddestory()
     {
-        button.onClick.AddListener();
+        
     }
 }

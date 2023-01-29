@@ -6,8 +6,8 @@ public class Destroybutton : MonoBehaviour
 {
     [SerializeField] Editbutton edit1;
     void Start()
+
     {
-        onClick.AddListener(destroy);
     }
     public void destroy()
     {
