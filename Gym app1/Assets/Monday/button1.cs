@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class button1 : MonoBehaviour
 {
-    [SerializeField] addexercise count1;
+    public addexercise count2;
     void Start()
     {
         gameObject.SetActive(false);
     }
     void Update()
     {
-        if(count.count1 == 1)
+        if(count1.count2 == 1)
         {
             gameObject.SetActive(true);
         }

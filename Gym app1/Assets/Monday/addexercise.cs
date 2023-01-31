@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class addexercise : MonoBehaviour
 {
-    public float count;
+    public float count1;
     public void NewGameButton()
     {
-        if (count < 9)
+        if (count1 < 9)
         {
-            count = count + 1;
+            count1 = count1 + 1;
         }
-
     }
 }
 
