@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class button1 : MonoBehaviour
 {
-    public addexercise count2;
-    void Start()
+    [SerializeField] Editbutton edit1;
+ 
+    public void changebutton()
     {
-        gameObject.SetActive(false);
-    }
-    void Update()
-    {
-        if(count1.count2 == 1)
+        if (edit1.edit2 == true)
         {
-            gameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
