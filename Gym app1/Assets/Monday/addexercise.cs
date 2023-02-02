@@ -33,39 +33,43 @@ public class addexercise : MonoBehaviour
         {
             count1 = count1 + 1;
         }
-        if (count1 >= 1)
+        else
+        {
+            count1 = 0;
+        }
+        if (count1 == 1 && !button1.gameObject.activeSelf)
         {
             button1.gameObject.SetActive(true);
         }
-        if (count1 >= 2)
+        if (count1 == 2 && !button2.gameObject.activeSelf)
         {
             button2.gameObject.SetActive(true);
         }
-        if (count1 >= 3)
+        if (count1 == 3 && !button3.gameObject.activeSelf)
         {
             button3.gameObject.SetActive(true);
         }
-        if (count1 >= 4)
+        if (count1 == 4 && !button4.gameObject.activeSelf)
         {
             button4.gameObject.SetActive(true);
         }
-        if (count1 >= 5)
+        if (count1 == 5 && !button5.gameObject.activeSelf)
         {
             button5.gameObject.SetActive(true);
         }
-        if (count1 >= 6)
+        if (count1 == 6 && !button6.gameObject.activeSelf)
         {
             button6.gameObject.SetActive(true);
         }
-        if (count1 >= 7)
+        if (count1 == 7 && !button7.gameObject.activeSelf)
         {
             button7.gameObject.SetActive(true);
         }
-        if (count1 >= 8)
+        if (count1 == 8 && !button8.gameObject.activeSelf)
         {
             button8.gameObject.SetActive(true);
         }
-        if (count1 >= 9)
+        if (count1 == 9 && !button9.gameObject.activeSelf)
         {
             button9.gameObject.SetActive(true);
         }
