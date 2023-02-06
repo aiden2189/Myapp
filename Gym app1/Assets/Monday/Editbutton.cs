@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Editbutton : MonoBehaviour
 {
-    public bool edit2;
+    public GameObject delete;
+    public GameObject change;
+    
+    void Start()
+    {
+        delete.gameObject.SetActive(false);
+        change.gameObject.SetActive(false);     
+    }
+
 
     public void edit()
     {
-        edit2 = true;
+        delete.gameObject.SetActive(true);
+        change.gameObject.SetActive(true);
     }
 }
