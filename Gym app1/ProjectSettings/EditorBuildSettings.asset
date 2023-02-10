@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Homescreen.unity
     guid: b995476deabedd34f8847280dfc62a0a
   - enabled: 1
-    path: Assets/Scenes/Monday.unity
+    path: Assets/Scenes/Mondays exercises/Monday.unity
     guid: 5420fd22c6a37e340acd9676f7454735
+  - enabled: 1
+    path: Assets/Scenes/Mondays exercises/exercise(1).unity
+    guid: 47357fe420c34674a9f1876d77303c63
   m_configObjects: {}
