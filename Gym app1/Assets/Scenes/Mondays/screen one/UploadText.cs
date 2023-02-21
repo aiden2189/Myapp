@@ -4,18 +4,18 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class Scene1 : MonoBehaviour
+public class UploadText : MonoBehaviour
 {
-    public static Scene1 scene1;
+    public static UploadText upload;
     public TMP_InputField inputField;
 
     public string name;
 
-    public void Awake()
+    private void Awake()
     {
-        if (scene1 == null)
+        if (upload == null)
         {
-            scene1 = this;
+            upload = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -28,6 +28,6 @@ public class Scene1 : MonoBehaviour
     {
         name = inputField.text;
 
-        SceneManager.LoadSceneAsync("exercise(1)");
+        SceneManager.LoadSceneAsync("Monday");
     }
 }
