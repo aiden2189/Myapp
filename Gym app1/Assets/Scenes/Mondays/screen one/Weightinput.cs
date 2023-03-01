@@ -5,6 +5,8 @@ using TMPro;
 
 public class Weightinput : MonoBehaviour
 {
+    public TMP_InputField input;
+
     public GameObject text1;
     public GameObject text2;
     public GameObject text3;
@@ -30,8 +32,13 @@ public class Weightinput : MonoBehaviour
     public void Countup()
     {
         count = count + 1;
-        texta = ("Enter weight");
     }
+
+    public void Clear()
+    {
+        input.text = ("");
+    }
+
     void Update()
     {
         texta = actualtext1.text;
@@ -49,4 +56,3 @@ public class Weightinput : MonoBehaviour
         }
     }
 }
-//actualtext1.text
