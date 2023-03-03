@@ -6,12 +6,14 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public float time;
+
     public GameObject text1;
-    TextMeshProUGUI actualtext1;
+
+    TMP_Text actualtext1;
 
     void start()
     {
-        actualtext1 = text1.GetComponent<TextMeshProUGUI>();
+        actualtext1 = text1.GetComponent<TMP_Text>();
     }
 
     public void Add()
