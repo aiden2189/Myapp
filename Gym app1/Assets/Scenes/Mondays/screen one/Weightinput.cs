@@ -30,18 +30,14 @@ public class Weightinput : MonoBehaviour
     }
 
     public void Countup()
-    {
+    {   
+        texta = actualtext1.text;
         count = count + 1;
-    }
-
-    public void Clear()
-    {
         input.text = ("");
     }
 
     void Update()
     {
-        texta = actualtext1.text;
         if (count == 1)
         {
             actualtext2.text = texta;
