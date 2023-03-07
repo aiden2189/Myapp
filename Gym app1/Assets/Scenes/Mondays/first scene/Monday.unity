@@ -1215,7 +1215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showname: {fileID: 437316129}
-  on: 0
 --- !u!114 &437316129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3532,18 +3531,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1081803239}
         m_TargetAssemblyTypeName: button1, Assembly-CSharp
         m_MethodName: changebutton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 437316128}
-        m_TargetAssemblyTypeName: ReceiveText, Assembly-CSharp
-        m_MethodName: turn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

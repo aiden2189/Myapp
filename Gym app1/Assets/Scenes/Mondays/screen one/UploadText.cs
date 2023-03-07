@@ -4,30 +4,24 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class UploadText : MonoBehaviour
+public class UploadText : MonoBehaviour, IDataPersistence
 {
-    public static UploadText upload;
     public TMP_InputField inputField;
 
     public string name;
 
-    private void Awake()
+    public void LoadData(GameData data)
     {
-        if (upload == null)
-        {
-            upload = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        this.name = data.name;
     }
 
+    public void SaveData(ref GameData data)
+    {
+        data.name = this.name;
+    }
+    
     public void setname()
     {
         name = inputField.text;
-
-        SceneManager.LoadSceneAsync("Monday");
     }
 }

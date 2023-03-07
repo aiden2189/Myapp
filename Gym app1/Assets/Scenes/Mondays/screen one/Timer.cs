@@ -5,18 +5,20 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public float time;
+    private float time;
+
+    private bool start;
 
     public GameObject text1;
 
-    TMP_Text actualtext1;
+    TextMeshProUGUI actualtext1;
 
-    void start()
+    void Start()
     {
-        actualtext1 = text1.GetComponent<TMP_Text>();
+        actualtext1 = text1.GetComponent<TextMeshProUGUI>();
     }
-
-    public void Add()
+    
+    public void Plus()
     {
         time = time + 30;
     }
@@ -26,8 +28,20 @@ public class Timer : MonoBehaviour
         time = time - 30;
     }
 
+    public void starttimer()
+    {
+        start = true;
+    }
     void Update()
     {
-        actualtext1.text = ("hi");
+        if (start == true)
+        {
+            time = time - 1 * Time.deltaTime;
+        }
+        else if (time == 0)
+        {
+            start = false;
+        }
+        actualtext1.text = (time.ToString("F0"));
     }    
 }
