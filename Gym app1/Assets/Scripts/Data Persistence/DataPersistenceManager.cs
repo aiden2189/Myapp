@@ -57,7 +57,6 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.SaveData(ref gameData);
         }
-
         dataHandler.Save(gameData);
     }    
     
