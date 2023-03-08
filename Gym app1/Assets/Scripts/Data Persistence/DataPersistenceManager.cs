@@ -49,6 +49,8 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.LoadData(gameData);
         }
+
+        Debug.Log("loaded Data = " + gameData.name);
     }
 
     public void SaveGame()
@@ -58,6 +60,8 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.SaveData(ref gameData);
         }
         dataHandler.Save(gameData);
+
+        Debug.Log("saved Data = " + gameData.name);
     }    
     
     private void OnApplicationQuit()
