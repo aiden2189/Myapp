@@ -54,7 +54,7 @@ public class FileDataHandler
 
             Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
 
-            string dataToStore = JsonUtility.ToJson(dataDirPath, true);
+            string dataToStore = JsonUtility.ToJson(data, true);
 
             using (FileStream stream = new FileStream(fullPath, FileMode.Create))
             {
