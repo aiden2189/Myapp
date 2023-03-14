@@ -5,7 +5,8 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    private float time;
+    private float seconds;
+    private float minutes;
 
     private bool start;
 
@@ -20,12 +21,12 @@ public class Timer : MonoBehaviour
     
     public void Plus()
     {
-        time = time + 30;
+        seconds = seconds + 30;
     }
 
     public void Minus()
     {
-        time = time - 30;
+        seconds = seconds - 30;
     }
 
     public void starttimer()
@@ -34,14 +35,27 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
+        if (seconds >= 60)
+        {
+            seconds = seconds - 60;
+            minutes = minutes + 1;
+        }
+
         if (start == true)
         {
-            time = time - 1 * Time.deltaTime;
+            seconds = seconds - 1 * Time.deltaTime;
         }
-        else if (time == 0)
+        else if (seconds < 0 && minutes > 0)
+        {
+            seconds = seconds + 59;
+            minutes = minutes - 1;
+        }
+        
+        if (seconds < 0 && minutes < 0)
         {
             start = false;
         }
-        actualtext1.text = (time.ToString("F0"));
+
+        actualtext1.text = (minutes.ToString() + ": "+ seconds.ToString("F0"));
     }    
 }
