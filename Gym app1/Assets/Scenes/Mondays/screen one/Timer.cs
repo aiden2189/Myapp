@@ -5,10 +5,10 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    private float seconds;
-    private float minutes;
+    public float seconds;
+    public float minutes;
 
-    private bool start;
+    public bool start;
 
     public GameObject text1;
 
@@ -35,23 +35,33 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
-        if (seconds >= 60)
+        if (start == false && seconds == 60)
         {
-            seconds = seconds - 60;
             minutes = minutes + 1;
+            seconds = seconds - 60;
+        }
+        if (start == false && seconds < 0 && minutes > 0)
+        {
+            minutes = minutes - 1;
+            seconds = 30;
+        }
+        if (seconds < 0 && minutes == 0)
+        {
+            seconds = 0;
+            start = false;
+        }
+
+        if (start == true && seconds < 0 && minutes > 0)
+        {
+            minutes = minutes - 1;
+            seconds = seconds + 60;
         }
 
         if (start == true)
         {
             seconds = seconds - 1 * Time.deltaTime;
         }
-        else if (seconds < 0 && minutes > 0)
-        {
-            seconds = seconds + 59;
-            minutes = minutes - 1;
-        }
-        
-        if (seconds < 0 && minutes < 0)
+        else
         {
             start = false;
         }
