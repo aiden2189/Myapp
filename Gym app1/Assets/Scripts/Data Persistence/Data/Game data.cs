@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class GameData
 {
-    public string name;
+    public string name1;
 
     public GameData()
     {
-        this.name = "...";
+        this.name1 = "Name";
     }
 }

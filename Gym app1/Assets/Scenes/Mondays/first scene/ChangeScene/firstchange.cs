@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class firstchange : MonoBehaviour
 {
-    public void playGame()
-    {
-        SceneManager.LoadScene(2);
-    }
     public void Back()
     {
         SceneManager.LoadScene(1);
+    }    
+    public void loadfirstbutton()
+    {
+        SceneManager.LoadScene(2);
     }
 }

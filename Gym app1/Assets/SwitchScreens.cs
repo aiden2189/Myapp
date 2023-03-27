@@ -21,6 +21,11 @@ public class SwitchScreens : MonoBehaviour
 
     void Update()
     {
+        if (change == 0)
+        {
+            change = 3;
+        }
+
         if (change == 1)
         {
             start.gameObject.SetActive(true);
@@ -46,6 +51,11 @@ public class SwitchScreens : MonoBehaviour
         else 
         {
             screen2.gameObject.SetActive(false);
+        }
+
+        if (change == 4)
+        {
+            change = 1;
         }
     }
 }

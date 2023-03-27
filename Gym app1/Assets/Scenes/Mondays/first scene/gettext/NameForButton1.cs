@@ -4,10 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class UploadText : MonoBehaviour, IDataPersistence
+public class NameForButton1 : MonoBehaviour, IDataPersistence
 {
-    public TMP_InputField inputField;
-
     public GameObject text1;
     TextMeshProUGUI actualtext1;
 
@@ -27,14 +25,10 @@ public class UploadText : MonoBehaviour, IDataPersistence
     {
         data.name1 = this.name1;
     }
-    
-    public void Setname()
-    {
-        name1 = inputField.text;
-    }
 
     void Update()
     {
         actualtext1.text = (name1.ToString());
     }
 }
+
