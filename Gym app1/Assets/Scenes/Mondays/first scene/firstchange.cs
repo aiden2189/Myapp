@@ -13,4 +13,8 @@ public class firstchange : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+    public void loadsecondbutton()
+    {
+        SceneManager.LoadScene(3);
+    }
 }

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Mondays/first scene/Monday.unity
     guid: 5420fd22c6a37e340acd9676f7454735
   - enabled: 1
-    path: Assets/Scenes/Mondays/screen one/exercise(1).unity
+    path: Assets/Scenes/Mondays/Excercise one/exercise(1).unity
     guid: 47357fe420c34674a9f1876d77303c63
+  - enabled: 1
+    path: Assets/Scenes/Mondays/Excercise two/exercise(2).unity
+    guid: ae70fa90471ce2f4b8ad95d6c9ef40e1
   m_configObjects: {}

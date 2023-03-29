@@ -7,9 +7,11 @@ using UnityEngine;
 public class GameData
 {
     public string name1;
+    public string name2;
 
     public GameData()
     {
         this.name1 = "Name";
+        name2 = "Name";
     }
 }
