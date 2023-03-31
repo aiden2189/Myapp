@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Weightinput : MonoBehaviour
+public class Weightinput2 : MonoBehaviour
 {
     public TMP_InputField input;
 

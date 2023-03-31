@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class UploadText1 : MonoBehaviour, IDataPersistence
+public class UploadText2 : MonoBehaviour, IDataPersistence
 {
     public TMP_InputField inputField;
 

@@ -11,7 +11,7 @@ public class Repinput1 : MonoBehaviour
     public GameObject text2;
     public GameObject text3;
     public GameObject text4;
-    public GameObject text5;
+    public GameObject set;
 
     public string texta;
 
@@ -29,7 +29,7 @@ public class Repinput1 : MonoBehaviour
         actualtext2 = text2.GetComponent<TextMeshProUGUI>();
         actualtext3 = text3.GetComponent<TextMeshProUGUI>();
         actualtext4 = text4.GetComponent<TextMeshProUGUI>();
-        actualtext5 = text5.GetComponent<TextMeshProUGUI>();
+        actualtext5 = set.GetComponent<TextMeshProUGUI>();
     }
 
     public void Countup()
