@@ -4,19 +4,19 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class UploadText1 : MonoBehaviour, IDataPersistence
+public class NameForButton1 : MonoBehaviour, IDataPersistence
 {
-    public TMP_InputField inputField;
-
     public GameObject[] text;
 
     TextMeshProUGUI actualtext1;
+    TextMeshProUGUI actualtext2;
 
     public string[] name = new string[2];
 
     void Start()
     {
         actualtext1 = text[0].GetComponent<TextMeshProUGUI>();
+        actualtext2 = text[1].GetComponent<TextMeshProUGUI>();
     }
 
     public void LoadData(GameData data)
@@ -30,19 +30,12 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
         data.name[0] = this.name[0];
         data.name[1] = this.name[1];
     }
-    
-    public void Setname1()
-    {
-        name[0] = inputField.text;
-    }
-
-    public void Setname2()
-    {
-        name[1] = inputField.text;
-    }
 
     void Update()
     {
         actualtext1.text = (name[0].ToString());
+        actualtext2.text = (name[1].ToString());
     }
 }
+
+

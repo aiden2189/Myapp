@@ -2930,11 +2930,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7adf8f4fa53e22f47972e70d14aa42c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 1362159666}
-  text1: {fileID: 1492580343}
-  text2: {fileID: 1807005197}
-  text3: {fileID: 1431594882}
-  text4: {fileID: 107321424}
+  input:
+  - {fileID: 1362159666}
+  text:
+  - {fileID: 1492580343}
+  - {fileID: 1807005197}
+  - {fileID: 1431594882}
+  - {fileID: 107321424}
   texta: 
   count: 0
 --- !u!114 &859717084
@@ -2950,8 +2952,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 1053104516}
-  text1: {fileID: 691357713}
-  name1: 
+  text:
+  - {fileID: 691357713}
+  name:
+  - 
+  - 
 --- !u!114 &859717085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2964,14 +2969,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d678fcbdf6c15459e4d01fc90ec39d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 286181216}
-  text1: {fileID: 64463753}
-  text2: {fileID: 1123189286}
-  text3: {fileID: 605159328}
-  text4: {fileID: 475479852}
-  set: {fileID: 805041437}
-  texta: 
-  count: 0
+  input:
+  - {fileID: 286181216}
+  text:
+  - {fileID: 64463753}
+  - {fileID: 1123189286}
+  - {fileID: 605159328}
+  - {fileID: 475479852}
+  - {fileID: 805041437}
+  rep:
+  - 
+  - 
+  - 
+  count: 1
 --- !u!1 &892089236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3360,7 +3370,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 859717084}
         m_TargetAssemblyTypeName: UploadText1, Assembly-CSharp
-        m_MethodName: Setname
+        m_MethodName: Setname1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

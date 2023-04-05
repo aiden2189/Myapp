@@ -3,56 +3,65 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Repinput1 : MonoBehaviour
+public class Repinput1 : MonoBehaviour, IDataPersistence
 {
-    public TMP_InputField input;
+    public TMP_InputField[] input;
 
-    public GameObject text1;
-    public GameObject text2;
-    public GameObject text3;
-    public GameObject text4;
-    public GameObject set;
+    public GameObject[] text;
 
-    public string texta;
+    private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[5];
 
-    TextMeshProUGUI actualtext1;
-    TextMeshProUGUI actualtext2;
-    TextMeshProUGUI actualtext3;
-    TextMeshProUGUI actualtext4;
-    TextMeshProUGUI actualtext5;
+    public string[] rep = new string[3];
 
     public int count;
 
     void Start()
     {
-        actualtext1 = text1.GetComponent<TextMeshProUGUI>();
-        actualtext2 = text2.GetComponent<TextMeshProUGUI>();
-        actualtext3 = text3.GetComponent<TextMeshProUGUI>();
-        actualtext4 = text4.GetComponent<TextMeshProUGUI>();
-        actualtext5 = set.GetComponent<TextMeshProUGUI>();
+        actualtext[0] = text[0].GetComponent<TextMeshProUGUI>();
+        actualtext[1] = text[1].GetComponent<TextMeshProUGUI>();
+        actualtext[2] = text[2].GetComponent<TextMeshProUGUI>();
+        actualtext[3] = text[3].GetComponent<TextMeshProUGUI>();
+        actualtext[4] = text[4].GetComponent<TextMeshProUGUI>();
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.rep[0] = data.rep[0];
+        this.rep[1] = data.rep[1];
+        this.rep[2] = data.rep[2];
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.rep[0] = this.rep[0];
+        data.rep[1] = this.rep[1];
+        data.rep[2] = this.rep[2];
     }
 
     public void Countup()
     {
-        texta = actualtext1.text;
         count = count + 1;
-        input.text = ("");
-        actualtext5.text = (count.ToString());
+        input[0].text = ("");
+        actualtext[4].text = (count.ToString());
     }
 
     void Update()
     {
-        if (count == 1)
+        if (count == 0)
         {
-            actualtext2.text = texta;
+            rep[0] = actualtext[0].text;
+        }
+        else if (count == 1)
+        {
+            rep[1] = actualtext[0].text;
         }
         else if (count == 2)
         {
-            actualtext3.text = texta;
+            rep[2] = actualtext[0].text;
         }
-        else if (count == 3)
-        {
-            actualtext4.text = texta;
-        }
+
+        actualtext[1].text = rep[0];
+        actualtext[2].text = rep[1];
+        actualtext[3].text = rep[2];
     }
 }

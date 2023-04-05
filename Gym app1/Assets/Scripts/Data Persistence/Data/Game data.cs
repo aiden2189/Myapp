@@ -6,12 +6,16 @@ using UnityEngine;
 
 public class GameData
 {
-    public string name1;
-    public string name2;
+    public string[] name = new string[2];
+
+    public string[] rep = new string[3];
 
     public GameData()
     {
-        this.name1 = "Name";
-        name2 = "Name";
+        this.name[0] = "Name";
+        this.name[1] = "Name";
+        this.rep[0] = "rep 1";
+        this.rep[1] = "rep 2";
+        this.rep[2] = "rep 3";
     }
 }
