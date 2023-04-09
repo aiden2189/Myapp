@@ -8,15 +8,15 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
 {
     public GameObject[] text;
 
-    TextMeshProUGUI actualtext1;
-    TextMeshProUGUI actualtext2;
+    public TextMeshProUGUI[] actualtext = new TextMeshProUGUI[2];
+
 
     public string[] name = new string[2];
 
     void Start()
     {
-        actualtext1 = text[0].GetComponent<TextMeshProUGUI>();
-        actualtext2 = text[1].GetComponent<TextMeshProUGUI>();
+        actualtext[0] = text[0].GetComponent<TextMeshProUGUI>();
+        actualtext[1] = text[1].GetComponent<TextMeshProUGUI>();
     }
 
     public void LoadData(GameData data)
@@ -25,7 +25,7 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
         this.name[1] = data.name[1];
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.name[0] = this.name[0];
         data.name[1] = this.name[1];
@@ -33,8 +33,8 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        actualtext1.text = (name[0].ToString());
-        actualtext2.text = (name[1].ToString());
+        actualtext[0].text = (name[0].ToString());
+        actualtext[1].text = (name[1].ToString());
     }
 }
 

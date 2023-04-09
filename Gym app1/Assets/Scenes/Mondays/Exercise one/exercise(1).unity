@@ -2952,8 +2952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 1053104516}
-  text:
-  - {fileID: 691357713}
+  text: {fileID: 1053104514}
   name:
   - 
   - 

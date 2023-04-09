@@ -8,7 +8,7 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 {
     public TMP_InputField inputField;
 
-    public GameObject[] text;
+    public GameObject text;
 
     TextMeshProUGUI actualtext1;
 
@@ -16,7 +16,7 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 
     void Start()
     {
-        actualtext1 = text[0].GetComponent<TextMeshProUGUI>();
+        actualtext1 = text.GetComponent<TextMeshProUGUI>();
     }
 
     public void LoadData(GameData data)
@@ -25,7 +25,7 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
         this.name[1] = data.name[1];
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.name[0] = this.name[0];
         data.name[1] = this.name[1];

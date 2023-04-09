@@ -31,7 +31,7 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
         this.rep[2] = data.rep[2];
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.rep[0] = this.rep[0];
         data.rep[1] = this.rep[1];
