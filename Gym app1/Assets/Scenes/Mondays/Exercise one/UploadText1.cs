@@ -12,7 +12,7 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 
     TextMeshProUGUI actualtext1;
 
-    public string[] name = new string[2];
+    public string[] Name = new string[2];
 
     void Start()
     {
@@ -21,28 +21,28 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.name[0] = data.name[0];
-        this.name[1] = data.name[1];
+        this.Name[0] = data.name[0];
+        this.Name[1] = data.name[1];
     }
 
     public void SaveData(GameData data)
     {
-        data.name[0] = this.name[0];
-        data.name[1] = this.name[1];
+        data.name[0] = this.Name[0];
+        data.name[1] = this.Name[1];
     }
     
     public void Setname1()
     {
-        name[0] = inputField.text;
+        Name[0] = inputField.text;
     }
 
     public void Setname2()
     {
-        name[1] = inputField.text;
+        Name[1] = inputField.text;
     }
 
     void Update()
     {
-        actualtext1.text = (name[0].ToString());
+        actualtext1.text = (Name[0].ToString());
     }
 }

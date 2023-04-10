@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Weightinput1 : MonoBehaviour
+public class Weightinput1 : MonoBehaviour, IDataPersistence
 {
     public TMP_InputField[] input;
 
     public GameObject[] text;
 
-    public string texta;
+    private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[4];
 
-    private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[5];
+    public string[,] Weight = new string[3,3];
 
-    public float count;
+    public int count;
 
     void Start()
     {
@@ -23,26 +23,44 @@ public class Weightinput1 : MonoBehaviour
         actualtext[3] = text[3].GetComponent<TextMeshProUGUI>();
     }
 
+    public void LoadData(GameData data)
+    {
+        this.Weight[0,0] = data.weight[0,0];
+        this.Weight[1,0] = data.weight[1,0];
+        this.Weight[2,0] = data.weight[2,0];
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.weight[0,0] = this.Weight[0,0];
+        data.weight[1,0] = this.Weight[1,0];
+        data.weight[2,0] = this.Weight[2,0];
+    }
+
     public void Countup()
-    {   
-        texta = actualtext[0].text;
+    {
         count = count + 1;
+        if (count == 1)
+        {
+            Weight[0,0] = actualtext[0].text;
+        }
+        else if (count == 2)
+        {
+            Weight[1,0] = actualtext[0].text;
+        }
+        else if (count == 3)
+        {
+            Weight[2,0] = actualtext[0].text;
+            count = 0;
+        }
+
         input[0].text = ("");
     }
 
     void Update()
     {
-        if (count == 1)
-        {
-            actualtext[1].text = texta;
-        }
-        else if (count == 2)
-        {
-            actualtext[2].text = texta;
-        }
-        else if (count == 3)
-        {
-            actualtext[3].text = texta;
-        }
+        actualtext[1].text = Weight[0,0];
+        actualtext[2].text = Weight[1,0];
+        actualtext[3].text = Weight[2,0];
     }
 }

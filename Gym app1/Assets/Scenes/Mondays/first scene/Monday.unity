@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 55721810}
   - component: {fileID: 55721813}
   - component: {fileID: 55721812}
-  - component: {fileID: 55721811}
   m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -162,22 +161,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 350}
   m_SizeDelta: {x: 700, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &55721811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55721809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f745afaeb7d21024ebb6edb7036a2917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: []
-  name:
-  - 
-  - 
 --- !u!114 &55721812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,7 +668,6 @@ GameObject:
   - component: {fileID: 483796774}
   - component: {fileID: 483796777}
   - component: {fileID: 483796776}
-  - component: {fileID: 483796775}
   m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -713,22 +695,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 350}
   m_SizeDelta: {x: 700, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &483796775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483796773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f745afaeb7d21024ebb6edb7036a2917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: []
-  name:
-  - 
-  - 
 --- !u!114 &483796776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,7 +1149,6 @@ GameObject:
   - component: {fileID: 766853444}
   - component: {fileID: 766853447}
   - component: {fileID: 766853446}
-  - component: {fileID: 766853445}
   m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1211,22 +1176,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 350}
   m_SizeDelta: {x: 700, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &766853445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766853443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f745afaeb7d21024ebb6edb7036a2917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: []
-  name:
-  - 
-  - 
 --- !u!114 &766853446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1952,7 +1901,10 @@ MonoBehaviour:
   text:
   - {fileID: 437316126}
   - {fileID: 289441051}
-  name:
+  actualtext:
+  - {fileID: 0}
+  - {fileID: 0}
+  Name:
   - 
   - 
 --- !u!1 &1156686666
@@ -1966,7 +1918,6 @@ GameObject:
   - component: {fileID: 1156686667}
   - component: {fileID: 1156686670}
   - component: {fileID: 1156686669}
-  - component: {fileID: 1156686668}
   m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1994,22 +1945,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 350}
   m_SizeDelta: {x: 700, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1156686668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156686666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f745afaeb7d21024ebb6edb7036a2917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: []
-  name:
-  - 
-  - 
 --- !u!114 &1156686669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2185,7 +2120,6 @@ GameObject:
   - component: {fileID: 1376936707}
   - component: {fileID: 1376936710}
   - component: {fileID: 1376936709}
-  - component: {fileID: 1376936708}
   m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2213,22 +2147,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 350}
   m_SizeDelta: {x: 700, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1376936708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376936706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f745afaeb7d21024ebb6edb7036a2917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: []
-  name:
-  - 
-  - 
 --- !u!114 &1376936709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2488,7 +2406,10 @@ MonoBehaviour:
   text:
   - {fileID: 437316126}
   - {fileID: 289441051}
-  name:
+  actualtext:
+  - {fileID: 0}
+  - {fileID: 0}
+  Name:
   - 
   - 
 --- !u!1 &1433679154
@@ -3237,7 +3158,6 @@ GameObject:
   - component: {fileID: 1585960970}
   - component: {fileID: 1585960973}
   - component: {fileID: 1585960972}
-  - component: {fileID: 1585960971}
   m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3265,22 +3185,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 350}
   m_SizeDelta: {x: 700, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1585960971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585960969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f745afaeb7d21024ebb6edb7036a2917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: []
-  name:
-  - 
-  - 
 --- !u!114 &1585960972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3389,7 +3293,6 @@ GameObject:
   - component: {fileID: 1715050351}
   - component: {fileID: 1715050354}
   - component: {fileID: 1715050353}
-  - component: {fileID: 1715050352}
   m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3417,22 +3320,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 350}
   m_SizeDelta: {x: 700, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1715050352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715050350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f745afaeb7d21024ebb6edb7036a2917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: []
-  name:
-  - 
-  - 
 --- !u!114 &1715050353
 MonoBehaviour:
   m_ObjectHideFlags: 0

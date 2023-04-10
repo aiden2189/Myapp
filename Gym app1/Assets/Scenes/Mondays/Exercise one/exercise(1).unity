@@ -2937,7 +2937,6 @@ MonoBehaviour:
   - {fileID: 1807005197}
   - {fileID: 1431594882}
   - {fileID: 107321424}
-  texta: 
   count: 0
 --- !u!114 &859717084
 MonoBehaviour:
@@ -2952,8 +2951,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 1053104516}
-  text: {fileID: 1053104514}
-  name:
+  text: {fileID: 691357713}
+  Name:
   - 
   - 
 --- !u!114 &859717085
@@ -2976,11 +2975,7 @@ MonoBehaviour:
   - {fileID: 605159328}
   - {fileID: 475479852}
   - {fileID: 805041437}
-  rep:
-  - 
-  - 
-  - 
-  count: 1
+  count: 0
 --- !u!1 &892089236
 GameObject:
   m_ObjectHideFlags: 0
