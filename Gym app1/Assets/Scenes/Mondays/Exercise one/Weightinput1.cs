@@ -11,7 +11,7 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
 
     private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[4];
 
-    public string[,] Weight = new string[3,3];
+    public string[] Weight = new string[3];
 
     public int count;
 
@@ -25,16 +25,16 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.Weight[0,0] = data.weight[0,0];
-        this.Weight[1,0] = data.weight[1,0];
-        this.Weight[2,0] = data.weight[2,0];
+        this.Weight[0] = data.weight[0,0,0];
+        this.Weight[0] = data.weight[0,0,1];
+        this.Weight[0] = data.weight[0,0,2];
     }
 
     public void SaveData(GameData data)
     {
-        data.weight[0,0] = this.Weight[0,0];
-        data.weight[1,0] = this.Weight[1,0];
-        data.weight[2,0] = this.Weight[2,0];
+        data.weight[0,0,0] = this.Weight[0];
+        data.weight[0,0,1] = this.Weight[0];
+        data.weight[0,0,2] = this.Weight[0];
     }
 
     public void Countup()
@@ -42,15 +42,15 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
         count = count + 1;
         if (count == 1)
         {
-            Weight[0,0] = actualtext[0].text;
+            Weight[0] = actualtext[0].text;
         }
         else if (count == 2)
         {
-            Weight[1,0] = actualtext[0].text;
+            Weight[0] = actualtext[0].text;
         }
         else if (count == 3)
         {
-            Weight[2,0] = actualtext[0].text;
+            Weight[0] = actualtext[0].text;
             count = 0;
         }
 
@@ -59,8 +59,8 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        actualtext[1].text = Weight[0,0];
-        actualtext[2].text = Weight[1,0];
-        actualtext[3].text = Weight[2,0];
+        actualtext[1].text = Weight[0];
+        actualtext[2].text = Weight[0];
+        actualtext[3].text = Weight[0];
     }
 }

@@ -11,7 +11,7 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
 
     private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[5];
 
-    public string[,] Rep = new string[3,3];
+    public string[] Rep = new string[3];
 
     public int count;
 
@@ -26,16 +26,16 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.Rep[0,0] = data.rep[0,0];
-        this.Rep[1,0] = data.rep[1,0];
-        this.Rep[2,0] = data.rep[2,0];
+        this.Rep[0] = data.rep[0];
+        this.Rep[1] = data.rep[1];
+        this.Rep[2] = data.rep[2];
     }
 
     public void SaveData(GameData data)
     {
-        data.rep[0,0] = this.Rep[0,0];
-        data.rep[1,0] = this.Rep[1,0];
-        data.rep[2,0] = this.Rep[2,0];
+        data.rep[0] = this.Rep[0];
+        data.rep[1] = this.Rep[1];
+        data.rep[2] = this.Rep[2];
     }
 
     public void Countup()
@@ -43,16 +43,15 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
         count = count + 1;
         if (count == 1)
         {
-            Rep[0,0] = actualtext[0].text;
+            Rep[0] = actualtext[0].text;
         }
         else if (count == 2)
         {
-            Rep[1,0] = actualtext[0].text;
+            Rep[1] = actualtext[0].text;
         }
         else if (count == 3)
         {
-            Rep[2,0] = actualtext[0].text;
-            count = 0;
+            Rep[2] = actualtext[0].text;
         }
 
         input[0].text = ("");
@@ -60,9 +59,9 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        actualtext[1].text = Rep[0,0];
-        actualtext[2].text = Rep[1,0];
-        actualtext[3].text = Rep[2,0];
+        actualtext[1].text = Rep[0];
+        actualtext[2].text = Rep[1];
+        actualtext[3].text = Rep[2];
         actualtext[4].text = ((count+1).ToString());   
     }
 }

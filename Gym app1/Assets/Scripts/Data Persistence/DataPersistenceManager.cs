@@ -63,6 +63,7 @@ public class DataPersistenceManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         SaveGame();
+        
     }
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()
