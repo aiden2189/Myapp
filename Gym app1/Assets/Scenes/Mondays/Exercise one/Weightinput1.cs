@@ -25,16 +25,16 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.Weight[0] = data.weight[0,0,0];
-        this.Weight[0] = data.weight[0,0,1];
-        this.Weight[0] = data.weight[0,0,2];
+        this.Weight[0] = data.weight3d[0,0,0];
+        this.Weight[0] = data.weight3d[0,0,1];
+        this.Weight[0] = data.weight3d[0,0,2];
     }
 
     public void SaveData(GameData data)
     {
-        data.weight[0,0,0] = this.Weight[0];
-        data.weight[0,0,1] = this.Weight[0];
-        data.weight[0,0,2] = this.Weight[0];
+        data.weight3d[0,0,0] = this.Weight[0];
+        data.weight3d[0,0,1] = this.Weight[0];
+        data.weight3d[0,0,2] = this.Weight[0];
     }
 
     public void Countup()
