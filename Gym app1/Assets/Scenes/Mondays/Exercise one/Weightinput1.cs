@@ -13,6 +13,8 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
 
     public string[] Weight = new string[3];
 
+    [SerializeField] private string id = 3;
+
     public int count;
 
     void Start()
@@ -25,16 +27,21 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.Weight[0] = data.weight3d[0,0,0];
-        this.Weight[0] = data.weight3d[0,0,1];
-        this.Weight[0] = data.weight3d[0,0,2];
+        data.SavedData.TryGetValue(id, out actualtext[1].text);
+        if(actualtext[1].text > 0)
+        {
+            Weight[0] = actualtext[1].text;
+        }
+
     }
 
     public void SaveData(GameData data)
     {
-        data.weight3d[0,0,0] = this.Weight[0];
-        data.weight3d[0,0,1] = this.Weight[0];
-        data.weight3d[0,0,2] = this.Weight[0];
+        if (data.SavedData.ContainsKey(id))
+        {
+            data.SavedData.Remove(id);
+        }
+        data.SavedData.Add(id, actualtext[1].text);
     }
 
     public void Countup()
