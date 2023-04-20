@@ -11,9 +11,18 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
 
     private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[4];
 
-    public string[] Weight = new string[3];
+    public string[] Weight = new string [3];
 
-    [SerializeField] private string id = 3;
+    [SerializeField] private string[] id = new string[3];
+
+    [ContextMenu("Generate guid for id")]
+
+    private void GenerateGuid()
+    {
+        id[0] = System.Guid.NewGuid().ToString();
+        id[1] = System.Guid.NewGuid().ToString();
+        id[2] = System.Guid.NewGuid().ToString();
+    }
 
     public int count;
 
@@ -27,21 +36,37 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        data.SavedData.TryGetValue(id, out actualtext[1].text);
-        if(actualtext[1].text > 0)
+        data.SavedData.TryGetValue(id[0], out Weight[0]);
+        data.SavedData.TryGetValue(id[1], out Weight[1]);
+        data.SavedData.TryGetValue(id[2], out Weight[2]);
+        if(Weight[0] == "")
         {
-            Weight[0] = actualtext[1].text;
+            actualtext[1].text = Weight[0];
+            actualtext[2].text = Weight[1];
+            actualtext[3].text = Weight[2];
         }
+        
+
 
     }
 
     public void SaveData(GameData data)
     {
-        if (data.SavedData.ContainsKey(id))
+        if (data.SavedData.ContainsKey(id[0]))
         {
-            data.SavedData.Remove(id);
+            data.SavedData.Remove(id[0]);
         }
-        data.SavedData.Add(id, actualtext[1].text);
+        if (data.SavedData.ContainsKey(id[1]))
+        {
+            data.SavedData.Remove(id[1]);
+        }
+        if (data.SavedData.ContainsKey(id[2]))
+        {
+            data.SavedData.Remove(id[2]);
+        }
+        data.SavedData.Add(id[0], Weight[0]);
+        data.SavedData.Add(id[1], Weight[1]);
+        data.SavedData.Add(id[2], Weight[2]);
     }
 
     public void Countup()
@@ -53,11 +78,11 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
         }
         else if (count == 2)
         {
-            Weight[0] = actualtext[0].text;
+            Weight[1] = actualtext[0].text;
         }
         else if (count == 3)
         {
-            Weight[0] = actualtext[0].text;
+            Weight[2] = actualtext[0].text;
             count = 0;
         }
 
@@ -67,7 +92,7 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
     void Update()
     {
         actualtext[1].text = Weight[0];
-        actualtext[2].text = Weight[0];
-        actualtext[3].text = Weight[0];
+        actualtext[2].text = Weight[1];
+        actualtext[3].text = Weight[2];
     }
 }
