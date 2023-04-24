@@ -189,7 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &60813181
 GameObject:
@@ -1134,51 +1134,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188864610}
   m_CullTransparentMesh: 1
---- !u!1 &229678103
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 229678105}
-  - component: {fileID: 229678104}
-  m_Layer: 0
-  m_Name: DataPersistenceManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &229678104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229678103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a01c15ee47c9ed4c8ebc65dcf1ddda9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileName: data.text
---- !u!4 &229678105
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229678103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3127317, y: -4.986553, z: 68.62912}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286181214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,7 +1729,7 @@ RectTransform:
   - {fileID: 1294289489}
   - {fileID: 2005549915}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2592,7 +2547,7 @@ RectTransform:
   - {fileID: 1456804478}
   - {fileID: 1031565325}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2827,8 +2782,8 @@ GameObject:
   - component: {fileID: 859717080}
   - component: {fileID: 859717079}
   - component: {fileID: 859717085}
-  - component: {fileID: 859717084}
   - component: {fileID: 859717083}
+  - component: {fileID: 859717084}
   m_Layer: 5
   m_Name: Things that need to be changed
   m_TagString: Untagged
@@ -2911,7 +2866,7 @@ RectTransform:
   m_Children:
   - {fileID: 1666679725}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2958,11 +2913,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c506ae58e20da47bd377044df48c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 1053104516}
-  text: {fileID: 691357713}
+  inputField:
+  - {fileID: 1053104516}
+  text:
+  - {fileID: 691357713}
   Name:
   - 
   - 
+  id:
+  - 7272eb67-3de5-4dbf-83c6-6c7828dcc3c2
+  - 568c1e9a-adc6-419d-bdab-f94c0f38ff26
+  - 229015f1-8005-4adc-b306-b49cee5e5cfd
 --- !u!114 &859717085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2984,6 +2945,10 @@ MonoBehaviour:
   - {fileID: 475479852}
   - {fileID: 805041437}
   Rep:
+  - 
+  - 
+  - 
+  id:
   - 
   - 
   - 
@@ -3082,7 +3047,7 @@ RectTransform:
   m_Children:
   - {fileID: 814112002}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -13,6 +13,17 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
 
     public string[] Rep = new string[3];
 
+    [SerializeField] private string[] id = new string[3];
+
+    [ContextMenu("Generate guid for id")]
+
+    private void GenerateGuid()
+    {
+        id[0] = System.Guid.NewGuid().ToString();
+        id[1] = System.Guid.NewGuid().ToString();
+        id[2] = System.Guid.NewGuid().ToString();
+    }
+
     public int count;
 
     void Start()
@@ -26,17 +37,39 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.Rep[0] = data.rep[0];
-        this.Rep[1] = data.rep[1];
-        this.Rep[2] = data.rep[2];
+        data.SavedData.TryGetValue(id[0], out Rep[0]);
+        data.SavedData.TryGetValue(id[1], out Rep[1]);
+        data.SavedData.TryGetValue(id[2], out Rep[2]);
+        if(Rep[0] == "")
+        {
+            actualtext[1].text = Rep[0];
+            actualtext[2].text = Rep[1];
+            actualtext[3].text = Rep[2];
+        }
+        
+
+
     }
 
     public void SaveData(GameData data)
     {
-        data.rep[0] = this.Rep[0];
-        data.rep[1] = this.Rep[1];
-        data.rep[2] = this.Rep[2];
+        if (data.SavedData.ContainsKey(id[0]))
+        {
+            data.SavedData.Remove(id[0]);
+        }
+        if (data.SavedData.ContainsKey(id[1]))
+        {
+            data.SavedData.Remove(id[1]);
+        }
+        if (data.SavedData.ContainsKey(id[2]))
+        {
+            data.SavedData.Remove(id[2]);
+        }
+        data.SavedData.Add(id[0], Rep[0]);
+        data.SavedData.Add(id[1], Rep[1]);
+        data.SavedData.Add(id[2], Rep[2]);
     }
+
 
     public void Countup()
     {

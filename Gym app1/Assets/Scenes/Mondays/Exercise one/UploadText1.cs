@@ -6,43 +6,70 @@ using UnityEngine.SceneManagement;
 
 public class UploadText1 : MonoBehaviour, IDataPersistence
 {
-    public TMP_InputField inputField;
+    public TMP_InputField[] inputField = new TMP_InputField[2];
 
-    public GameObject text;
+    public GameObject[] text = new GameObject[2];
 
-    TextMeshProUGUI actualtext1;
+    private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[2];
 
     public string[] Name = new string[2];
 
+    [SerializeField] public string[] id = new string[3];
+
+    [ContextMenu("Generate guid for id")]
+
+    private void GenerateGuid()
+    {
+        id[0] = System.Guid.NewGuid().ToString();
+        id[1] = System.Guid.NewGuid().ToString();
+        id[2] = System.Guid.NewGuid().ToString();
+    }
+
     void Start()
     {
-        actualtext1 = text.GetComponent<TextMeshProUGUI>();
+        actualtext[0] = text[0].GetComponent<TextMeshProUGUI>();
     }
 
     public void LoadData(GameData data)
     {
-        this.Name[0] = data.name[0];
-        this.Name[1] = data.name[1];
+        data.SavedData.TryGetValue(id[0], out Name[0]);
+        data.SavedData.TryGetValue(id[1], out Name[1]);
+        if(Name[0] == "")
+        {
+            actualtext[0].text = Name[0];
+            actualtext[1].text = Name[1];
+        }
+        
+
+
     }
 
     public void SaveData(GameData data)
     {
-        data.name[0] = this.Name[0];
-        data.name[1] = this.Name[1];
+        if (data.SavedData.ContainsKey(id[0]))
+        {
+            data.SavedData.Remove(id[0]);
+        }
+        if (data.SavedData.ContainsKey(id[1]))
+        {
+            data.SavedData.Remove(id[1]);
+        }
+        data.SavedData.Add(id[0], Name[0]);
+        data.SavedData.Add(id[1], Name[1]);
     }
     
     public void Setname1()
     {
-        Name[0] = inputField.text;
+        Name[0] = inputField[0].text;
     }
 
     public void Setname2()
     {
-        Name[1] = inputField.text;
+        Name[1] = inputField[1].text;
     }
 
     void Update()
     {
-        actualtext1.text = (Name[0].ToString());
+        actualtext[0].text = (Name[0].ToString());
     }
 }
