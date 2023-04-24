@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class firstchange : MonoBehaviour
+public class change : MonoBehaviour
 {
     public void Back()
     {
