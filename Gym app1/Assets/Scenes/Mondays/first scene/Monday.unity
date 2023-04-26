@@ -2030,8 +2030,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1295740218}
   - component: {fileID: 1295740220}
-  - component: {fileID: 1295740222}
   - component: {fileID: 1295740221}
+  - component: {fileID: 1295740222}
   m_Layer: 8
   m_Name: Buttons
   m_TagString: Untagged
@@ -2107,9 +2107,9 @@ MonoBehaviour:
   - 
   - 
   id:
-  - 
-  - 
-  - 
+  - 846dbbb3-75fe-4e6c-b93a-0796c8132778
+  - 126a1e7d-d78b-4239-b0d7-bd65304c7536
+  - c874d725-f504-4d6e-b4a2-77888365bfff
 --- !u!1 &1376936706
 GameObject:
   m_ObjectHideFlags: 0

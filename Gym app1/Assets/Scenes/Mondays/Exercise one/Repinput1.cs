@@ -11,7 +11,7 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
 
     private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[5];
 
-    public string[] Rep = new string[3];
+    public string[] Rep = new string [3];
 
     [SerializeField] private string[] id = new string[3];
 
@@ -46,9 +46,6 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
             actualtext[2].text = Rep[1];
             actualtext[3].text = Rep[2];
         }
-        
-
-
     }
 
     public void SaveData(GameData data)

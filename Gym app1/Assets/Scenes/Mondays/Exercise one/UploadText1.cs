@@ -16,18 +16,10 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 
     [SerializeField] public string[] id = new string[3];
 
-    [ContextMenu("Generate guid for id")]
-
-    private void GenerateGuid()
-    {
-        id[0] = System.Guid.NewGuid().ToString();
-        id[1] = System.Guid.NewGuid().ToString();
-        id[2] = System.Guid.NewGuid().ToString();
-    }
-
     void Start()
     {
         actualtext[0] = text[0].GetComponent<TextMeshProUGUI>();
+        actualtext[1] = text[1].GetComponent<TextMeshProUGUI>();
     }
 
     public void LoadData(GameData data)
@@ -39,9 +31,6 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
             actualtext[0].text = Name[0];
             actualtext[1].text = Name[1];
         }
-        
-
-
     }
 
     public void SaveData(GameData data)
@@ -70,6 +59,7 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        actualtext[0].text = (Name[0].ToString());
+        actualtext[0].text = (Name[0]);
+        actualtext[1].text = (Name[1]);
     }
 }
