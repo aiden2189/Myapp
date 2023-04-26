@@ -45,9 +45,6 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
             actualtext[2].text = Weight[1];
             actualtext[3].text = Weight[2];
         }
-        
-
-
     }
 
     public void SaveData(GameData data)
