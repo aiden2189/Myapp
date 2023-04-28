@@ -11,7 +11,9 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
 
     private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[4];
 
-    public string[] Weight = new string [3];
+    public string[] Weight = new string[3];
+
+    public int count;
 
     [SerializeField] private string[] id = new string[3];
 
@@ -23,8 +25,6 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
         id[1] = System.Guid.NewGuid().ToString();
         id[2] = System.Guid.NewGuid().ToString();
     }
-
-    public int count;
 
     void Start()
     {
@@ -39,10 +39,17 @@ public class Weightinput1 : MonoBehaviour, IDataPersistence
         data.SavedData.TryGetValue(id[0], out Weight[0]);
         data.SavedData.TryGetValue(id[1], out Weight[1]);
         data.SavedData.TryGetValue(id[2], out Weight[2]);
-        if(Weight[0] == "")
+        
+        if(Weight[0] != "")
         {
             actualtext[1].text = Weight[0];
+        }
+        else if(Weight[1] != "")
+        {
             actualtext[2].text = Weight[1];
+        }
+        else if(Weight[2] != "")
+        {
             actualtext[3].text = Weight[2];
         }
     }

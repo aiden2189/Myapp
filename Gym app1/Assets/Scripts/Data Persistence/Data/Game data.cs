@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class GameData
 {
-    public string[] name = new string[2];
-
     public SerializableDictionary<string, string> SavedData;
 
     public GameData()

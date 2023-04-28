@@ -11,8 +11,10 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
 
     private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[5];
 
-    public string[] Rep = new string [3];
+    public string[] Rep = new string[3];
 
+    public int count;
+    
     [SerializeField] private string[] id = new string[3];
 
     [ContextMenu("Generate guid for id")]
@@ -23,8 +25,6 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
         id[1] = System.Guid.NewGuid().ToString();
         id[2] = System.Guid.NewGuid().ToString();
     }
-
-    public int count;
 
     void Start()
     {
@@ -40,7 +40,7 @@ public class Repinput1 : MonoBehaviour, IDataPersistence
         data.SavedData.TryGetValue(id[0], out Rep[0]);
         data.SavedData.TryGetValue(id[1], out Rep[1]);
         data.SavedData.TryGetValue(id[2], out Rep[2]);
-        if(Rep[0] == "")
+        if(Rep[0] != "")
         {
             actualtext[1].text = Rep[0];
             actualtext[2].text = Rep[1];

@@ -12,7 +12,7 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
 
     public string[] Name = new string[2];
 
-    [SerializeField] public string[] id = new string[3];
+    [SerializeField] public string[] id = new string[2];
 
     [ContextMenu("Generate guid for id")]
 
@@ -20,7 +20,6 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
     {
         id[0] = System.Guid.NewGuid().ToString();
         id[1] = System.Guid.NewGuid().ToString();
-        id[2] = System.Guid.NewGuid().ToString();
     }
 
     void Start()
@@ -29,11 +28,11 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
         actualtext[1] = text[1].GetComponent<TextMeshProUGUI>();
     }
 
-public void LoadData(GameData data)
+    public void LoadData(GameData data)
     {
         data.SavedData.TryGetValue(id[0], out Name[0]);
         data.SavedData.TryGetValue(id[1], out Name[1]);
-        if(Name[0] == "")
+        if(Name[0] != "")
         {
             actualtext[0].text = Name[0];
             actualtext[1].text = Name[1];
