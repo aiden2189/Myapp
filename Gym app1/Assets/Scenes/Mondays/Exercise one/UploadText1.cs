@@ -6,62 +6,53 @@ using UnityEngine.SceneManagement;
 
 public class UploadText1 : MonoBehaviour, IDataPersistence
 {
-    public TMP_InputField[] inputField = new TMP_InputField[2];
+    public GameObject Uploadtext;
 
-    public GameObject[] text = new GameObject[2];
+    public GameObject UploadPlaceholder;
 
-    private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[2];
+    public TMP_InputField inputField;
 
-    public string[] Name = new string[2];
+    private TextMeshProUGUI actualtext;
 
-    [SerializeField] public string[] id = new string[2];
+    public string Name;
+
+    [SerializeField] public string id;
 
     void Start()
     {
-        actualtext[0] = text[0].GetComponent<TextMeshProUGUI>();
-        actualtext[1] = text[1].GetComponent<TextMeshProUGUI>();
+        inputField = Uploadtext.GetComponent<TMP_InputField>();
+
+        UploadPlaceholder = Uploadtext.transform.Find("Text Area/uploadPlaceholder").gameObject;
+;
+
+        actualtext = UploadPlaceholder.GetComponent<TextMeshProUGUI>();
     }
 
     public void Setname1()
     {
-        Name[0] = inputField[0].text;
-    }
-
-    public void Setname2()
-    {
-        Name[1] = inputField[1].text;
+        Name = inputField.text;
     }
 
     public void LoadData(GameData data)
     {
-        data.SavedData.TryGetValue(id[0], out Name[0]);
-        data.SavedData.TryGetValue(id[1], out Name[1]);
-        if(Name[0] != "")
+        data.SavedData.TryGetValue(id, out Name);
+        if(Name != "")
         {
-            actualtext[0].text = Name[0];
-            actualtext[1].text = Name[1];
+            actualtext.text = Name;
         }
     }
 
     public void SaveData(GameData data)
     {
-        if (data.SavedData.ContainsKey(id[0]))
+        if (data.SavedData.ContainsKey(id))
         {
-            data.SavedData.Remove(id[0]);
+            data.SavedData.Remove(id);
         }
-        if (data.SavedData.ContainsKey(id[1]))
-        {
-            data.SavedData.Remove(id[1]);
-        }
-        data.SavedData.Add(id[0], Name[0]);
-        data.SavedData.Add(id[1], Name[1]);
+        data.SavedData.Add(id, Name);
     }
     
-
-
     void Update()
     {
-        actualtext[0].text = (Name[0]);
-        actualtext[1].text = (Name[1]);
+        actualtext.text = Name;
     }
 }
