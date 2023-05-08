@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 64463756}
   - component: {fileID: 64463755}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RepText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1147,7 +1147,7 @@ GameObject:
   - component: {fileID: 286181217}
   - component: {fileID: 286181216}
   m_Layer: 5
-  m_Name: Input Reps
+  m_Name: Input Rep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2888,11 +2888,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Inputscreen: {fileID: 811371756}
   text:
-  - {fileID: 1492580343}
-  - {fileID: 1807005197}
-  - {fileID: 1431594882}
-  - {fileID: 107321424}
-  input: []
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Weight:
   - 
   - 
@@ -2901,7 +2905,6 @@ MonoBehaviour:
   - 
   - 
   - 
-  count: 0
   id:
   - ea237ebd-8e29-4ec6-ba97-420ea468fc01
   - 1b2b23df-c560-46b2-b699-933484a09fd0
@@ -2918,10 +2921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c506ae58e20da47bd377044df48c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Uploadtext: {fileID: 1053104514}
-  UploadPlaceholder: {fileID: 0}
-  inputField: {fileID: 0}
-  Name: 
+  AlwaysShowing: {fileID: 602255015}
   id: 
 --- !u!1 &892089236
 GameObject:
@@ -4856,7 +4856,7 @@ GameObject:
   - component: {fileID: 1492580346}
   - component: {fileID: 1492580345}
   m_Layer: 5
-  m_Name: Text
+  m_Name: WeightText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5042,7 +5042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666679725}
   m_Layer: 5
-  m_Name: log screen
+  m_Name: log Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

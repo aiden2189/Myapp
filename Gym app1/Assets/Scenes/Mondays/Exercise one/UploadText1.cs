@@ -6,24 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class UploadText1 : MonoBehaviour, IDataPersistence
 {
-    public GameObject Uploadtext;
+    public GameObject AlwaysShowing;
 
-    public GameObject UploadPlaceholder;
+    private GameObject UploadPlaceholder;
 
-    public TMP_InputField inputField;
+    private TMP_InputField inputField;
 
     private TextMeshProUGUI actualtext;
 
-    public string Name;
+    private string Name;
 
     [SerializeField] public string id;
 
     void Start()
     {
-        inputField = Uploadtext.GetComponent<TMP_InputField>();
+        inputField = AlwaysShowing.GetComponentInChildren<TMP_InputField>();
 
-        UploadPlaceholder = Uploadtext.transform.Find("Text Area/uploadPlaceholder").gameObject;
-;
+        UploadPlaceholder = AlwaysShowing.transform.Find("UploadText/Text Area/uploadPlaceholder").gameObject;
 
         actualtext = UploadPlaceholder.GetComponent<TextMeshProUGUI>();
     }
