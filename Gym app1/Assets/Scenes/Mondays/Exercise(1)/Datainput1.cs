@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Datainput1 : MonoBehaviour, IDataPersistence
 {
@@ -20,15 +21,6 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
     private int count;
 
     [SerializeField] private string[] id = new string[3];
-
-    [ContextMenu("Generate guid for id")]
-
-    private void GenerateGuid()
-    {
-        id[0] = System.Guid.NewGuid().ToString();
-        id[1] = System.Guid.NewGuid().ToString();
-        id[2] = System.Guid.NewGuid().ToString();
-    }
 
     void Start()
     {    
@@ -52,26 +44,37 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
         actualtext[6] = text[6].GetComponent<TextMeshProUGUI>();
         actualtext[7] = text[7].GetComponent<TextMeshProUGUI>();
         actualtext[8] = text[8].GetComponent<TextMeshProUGUI>();
+
+        id[0] = (SceneManager.GetActiveScene().name + " = 1");
+        id[1] = (SceneManager.GetActiveScene().name + " = 2");
+        id[2] = (SceneManager.GetActiveScene().name + " = 3");
     }
 
     public void LoadData(GameData data)
     {
-        data.SavedData.TryGetValue(id[0], out Weight[0]);
-        if(Weight[0] != "")
+        bool hasValue = data.SavedData.TryGetValue(id[0], out Weight[0]);
+        if(hasValue)
         {
-            actualtext[1].text = Weight[0];
+            this.Weight[0] = Weight[0];
+
+            Debug.Log(Weight[0]);
+            Debug.Log("true");
+        }
+        else if (data.SavedData.TryGetValue(id[0], out Weight[0]) == false)
+        {
+            Debug.Log("false");
         }
 
         data.SavedData.TryGetValue(id[1], out Weight[1]);
         if(Weight[1] != "")
         {
-            actualtext[2].text = Weight[1];
+            actualtext[3].text = Weight[1];
         }
 
         data.SavedData.TryGetValue(id[1], out Weight[1]);
         if(Weight[2] != "")
         {
-            actualtext[3].text = Weight[2];
+            actualtext[4].text = Weight[2];
         }
     }
 
@@ -81,16 +84,16 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
         {
             data.SavedData.Remove(id[0]);
         }
+        data.SavedData.Add(id[0], Weight[0]);
         if (data.SavedData.ContainsKey(id[1]))
         {
             data.SavedData.Remove(id[1]);
         }
+        data.SavedData.Add(id[1], Weight[1]);
         if (data.SavedData.ContainsKey(id[2]))
         {
             data.SavedData.Remove(id[2]);
         }
-        data.SavedData.Add(id[0], Weight[0]);
-        data.SavedData.Add(id[1], Weight[1]);
         data.SavedData.Add(id[2], Weight[2]);
     }
 
