@@ -52,29 +52,16 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        bool hasValue = data.SavedData.TryGetValue(id[0], out Weight[0]);
-        if(hasValue)
+        if(data.SavedData.TryGetValue(id[0], out Weight[0]))
         {
-            this.Weight[0] = Weight[0];
+            Weight[0] = data.SavedData[id[0], out Weight[0]];
 
-            Debug.Log(Weight[0]);
+            Debug.Log("data, " + data.SavedData[id[0], out Weight[0]]);
             Debug.Log("true");
         }
         else if (data.SavedData.TryGetValue(id[0], out Weight[0]) == false)
         {
             Debug.Log("false");
-        }
-
-        data.SavedData.TryGetValue(id[1], out Weight[1]);
-        if(Weight[1] != "")
-        {
-            actualtext[3].text = Weight[1];
-        }
-
-        data.SavedData.TryGetValue(id[1], out Weight[1]);
-        if(Weight[2] != "")
-        {
-            actualtext[4].text = Weight[2];
         }
     }
 
