@@ -4,9 +4,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
+
 public class Datainput1 : MonoBehaviour, IDataPersistence
 {
-    public GameObject Inputscreen;
+    public GameObject Screens;
 
     private TMP_InputField[] input;
 
@@ -20,20 +22,20 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
 
     private int count;
 
-    [SerializeField] private string[] id = new string[3];
+    [SerializeField] private string[] id = new string[6];
 
-    void Start()
+    void Awake()
     {    
-        input = Inputscreen.GetComponentsInChildren<TMP_InputField>();
-        text[0] = Inputscreen.transform.Find("Input Weight/Text Area/WeightText").gameObject;
-        text[1] = Inputscreen.transform.Find("Input Rep/Text Area/RepText").gameObject;
-        text[2] = Inputscreen.transform.Find("log Screen/Weight (1)").gameObject;
-        text[3] = Inputscreen.transform.Find("log Screen/Weight (2)").gameObject;
-        text[4] = Inputscreen.transform.Find("log Screen/Weight (3)").gameObject;
-        text[5] = Inputscreen.transform.Find("log Screen/Reps (1)").gameObject;
-        text[6] = Inputscreen.transform.Find("log Screen/Reps (2)").gameObject;
-        text[7] = Inputscreen.transform.Find("log Screen/Reps (3)").gameObject;
-        text[8] = Inputscreen.transform.Find("Set").gameObject;
+        input = Screens.GetComponentsInChildren<TMP_InputField>();
+        text[0] = Screens.transform.Find("Input Screen/Input Weight/Text Area/WeightText").gameObject;
+        text[1] = Screens.transform.Find("Input Screen/Input Rep/Text Area/RepText").gameObject;
+        text[2] = Screens.transform.Find("log Screen/Weight (1)").gameObject;
+        text[3] = Screens.transform.Find("log Screen/Weight (2)").gameObject;
+        text[4] = Screens.transform.Find("log Screen/Weight (3)").gameObject;
+        text[5] = Screens.transform.Find("log Screen/Reps (1)").gameObject;
+        text[6] = Screens.transform.Find("log Screen/Reps (2)").gameObject;
+        text[7] = Screens.transform.Find("log Screen/Reps (3)").gameObject;
+        text[8] = Screens.transform.Find("Input Screen/Set").gameObject;
 
         actualtext[0] = text[0].GetComponent<TextMeshProUGUI>();
         actualtext[1] = text[1].GetComponent<TextMeshProUGUI>();
@@ -48,21 +50,37 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
         id[0] = (SceneManager.GetActiveScene().name + " = 1");
         id[1] = (SceneManager.GetActiveScene().name + " = 2");
         id[2] = (SceneManager.GetActiveScene().name + " = 3");
+        id[3] = (SceneManager.GetActiveScene().name + " = 4");
+        id[4] = (SceneManager.GetActiveScene().name + " = 5");
+        id[5] = (SceneManager.GetActiveScene().name + " = 6");
     }
 
     public void LoadData(GameData data)
     {
-        if(data.SavedData.TryGetValue(id[0], out Weight[0]))
+        if(data.SavedData.TryGetValue(id[0], out string weight1))
         {
-            Weight[0] = data.SavedData[id[0], out Weight[0]];
-
-            Debug.Log("data, " + data.SavedData[id[0], out Weight[0]]);
-            Debug.Log("true");
-        }
-        else if (data.SavedData.TryGetValue(id[0], out Weight[0]) == false)
+            this.Weight[0] = weight1;
+        } 
+        if(data.SavedData.TryGetValue(id[1], out string weight2))
         {
-            Debug.Log("false");
-        }
+            this.Weight[1] = weight2;
+        } 
+        if(data.SavedData.TryGetValue(id[2], out string weight3))
+        {
+            this.Weight[2] = weight3;
+        } 
+        if(data.SavedData.TryGetValue(id[3], out string rep1))
+        {
+            this.Rep[0] = rep1;
+        } 
+        if(data.SavedData.TryGetValue(id[4], out string rep2))
+        {
+            this.Rep[1] = rep2;
+        } 
+        if(data.SavedData.TryGetValue(id[5], out string rep3))
+        {
+            this.Rep[2] = rep3;
+        } 
     }
 
     public void SaveData(GameData data)
@@ -72,16 +90,36 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
             data.SavedData.Remove(id[0]);
         }
         data.SavedData.Add(id[0], Weight[0]);
+
         if (data.SavedData.ContainsKey(id[1]))
         {
             data.SavedData.Remove(id[1]);
         }
         data.SavedData.Add(id[1], Weight[1]);
+
         if (data.SavedData.ContainsKey(id[2]))
         {
             data.SavedData.Remove(id[2]);
         }
         data.SavedData.Add(id[2], Weight[2]);
+        
+        if (data.SavedData.ContainsKey(id[3]))
+        {
+            data.SavedData.Remove(id[3]);
+        }
+        data.SavedData.Add(id[3], Rep[0]);
+
+        if (data.SavedData.ContainsKey(id[4]))
+        {
+            data.SavedData.Remove(id[4]);
+        }
+        data.SavedData.Add(id[4], Rep[1]);
+
+        if (data.SavedData.ContainsKey(id[5]))
+        {
+            data.SavedData.Remove(id[5]);
+        }
+        data.SavedData.Add(id[5], Rep[2]);
     }
 
     public void Countup()
