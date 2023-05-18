@@ -12,15 +12,7 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
 
     public string[] Name = new string[2];
 
-    [SerializeField] public string[] id = new string[2];
-
-    [ContextMenu("Generate guid for id")]
-
-    private void GenerateGuid()
-    {
-        id[0] = System.Guid.NewGuid().ToString();
-        id[1] = System.Guid.NewGuid().ToString();
-    }
+    public string[] id = new string[2];
 
     void Start()
     {
@@ -30,15 +22,12 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        data.SavedData.TryGetValue(id[0], out Name[0]);
-        data.SavedData.TryGetValue(id[1], out Name[1]);
-        if(Name[0] != "")
+        if(data.SavedData.TryGetValue("Exercise(1) = name", out string name))
         {
-            actualtext[0].text = Name[0];
-            actualtext[1].text = Name[1];
-        }
+            this.Name[0] = name;
+        } 
     }
-
+    
     public void SaveData(GameData data)
     {
         if (data.SavedData.ContainsKey(id[0]))

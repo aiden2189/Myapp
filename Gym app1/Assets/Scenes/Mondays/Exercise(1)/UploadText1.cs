@@ -14,17 +14,19 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 
     private TextMeshProUGUI actualtext;
 
-    private string Name;
+    public string Name;
 
     [SerializeField] public string id;
 
-    void Start()
+    void Awake()
     {
         inputField = AlwaysShowing.GetComponentInChildren<TMP_InputField>();
 
         UploadPlaceholder = AlwaysShowing.transform.Find("UploadText/Text Area/uploadPlaceholder").gameObject;
 
         actualtext = UploadPlaceholder.GetComponent<TextMeshProUGUI>();
+
+        id = (SceneManager.GetActiveScene().name + " = name");
     }
 
     public void Setname1()
@@ -34,11 +36,10 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        data.SavedData.TryGetValue(id, out Name);
-        if(Name != "")
+        if(data.SavedData.TryGetValue(id, out string name))
         {
-            actualtext.text = Name;
-        }
+            this.Name = name;
+        } 
     }
 
     public void SaveData(GameData data)
