@@ -206,7 +206,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7498839}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 89704494}
+        m_TargetAssemblyTypeName: changedays, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1295562588}
+        m_TargetAssemblyTypeName: MakeID, Assembly-CSharp
+        m_MethodName: Sunday
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7498839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +453,7 @@ GameObject:
   - component: {fileID: 89704492}
   - component: {fileID: 89704491}
   - component: {fileID: 89704490}
+  - component: {fileID: 89704494}
   m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
@@ -517,13 +542,25 @@ RectTransform:
   - {fileID: 1002157524}
   - {fileID: 7498837}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &89704494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89704489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4cc0a1e4cd1f240888fd75dd25535c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &296934923
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +816,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 319326137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 89704494}
+        m_TargetAssemblyTypeName: changedays, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1295562588}
+        m_TargetAssemblyTypeName: MakeID, Assembly-CSharp
+        m_MethodName: Friday
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &319326137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,7 +945,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &578691959
 GameObject:
@@ -1142,13 +1203,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 89704494}
+        m_TargetAssemblyTypeName: changedays, Assembly-CSharp
+        m_MethodName: Change
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1295562588}
+        m_TargetAssemblyTypeName: MakeID, Assembly-CSharp
+        m_MethodName: Tuesday
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1531,7 +1604,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1002157526}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 89704494}
+        m_TargetAssemblyTypeName: changedays, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1295562588}
+        m_TargetAssemblyTypeName: MakeID, Assembly-CSharp
+        m_MethodName: Saturday
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1002157526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,7 +1750,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1137826559}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 89704494}
+        m_TargetAssemblyTypeName: changedays, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1295562588}
+        m_TargetAssemblyTypeName: MakeID, Assembly-CSharp
+        m_MethodName: Wednesday
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1137826559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1692,6 +1813,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137826556}
   m_CullTransparentMesh: 1
+--- !u!1001 &1295562586
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3479354630034061708, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_Name
+      value: DataPersistenceManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3127317
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.986553
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 68.62912
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+--- !u!114 &1295562588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1295562588, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
+  m_PrefabInstance: {fileID: 1295562586}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45741ceca7bbc2a40a65afaf5ec29fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306891309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,7 +2136,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1355947137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 89704494}
+        m_TargetAssemblyTypeName: changedays, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1295562588}
+        m_TargetAssemblyTypeName: MakeID, Assembly-CSharp
+        m_MethodName: Thursday
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1355947137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2170,7 +2383,6 @@ GameObject:
   - component: {fileID: 1916861537}
   - component: {fileID: 1916861536}
   - component: {fileID: 1916861535}
-  - component: {fileID: 1916861538}
   m_Layer: 8
   m_Name: Monday
   m_TagString: Untagged
@@ -2243,9 +2455,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1916861538}
-        m_TargetAssemblyTypeName: monday1, Assembly-CSharp
-        m_MethodName: playGame
+      - m_Target: {fileID: 89704494}
+        m_TargetAssemblyTypeName: changedays, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1295562588}
+        m_TargetAssemblyTypeName: MakeID, Assembly-CSharp
+        m_MethodName: Monday
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2293,18 +2517,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916861533}
   m_CullTransparentMesh: 1
---- !u!114 &1916861538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916861533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e4cc0a1e4cd1f240888fd75dd25535c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2082206523
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,8 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
 
     [SerializeField] private string[] id = new string[6];
 
+    private string ID;
+
     void Awake()
     {    
         input = Screens.GetComponentsInChildren<TMP_InputField>();
@@ -47,16 +49,20 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
         actualtext[7] = text[7].GetComponent<TextMeshProUGUI>();
         actualtext[8] = text[8].GetComponent<TextMeshProUGUI>();
 
-        id[0] = (SceneManager.GetActiveScene().name + " = 1");
-        id[1] = (SceneManager.GetActiveScene().name + " = 2");
-        id[2] = (SceneManager.GetActiveScene().name + " = 3");
-        id[3] = (SceneManager.GetActiveScene().name + " = 4");
-        id[4] = (SceneManager.GetActiveScene().name + " = 5");
-        id[5] = (SceneManager.GetActiveScene().name + " = 6");
+        id[0] = (ID + SceneManager.GetActiveScene().name + " = 1");
+        id[1] = (ID + SceneManager.GetActiveScene().name + " = 2");
+        id[2] = (ID + SceneManager.GetActiveScene().name + " = 3");
+        id[3] = (ID + SceneManager.GetActiveScene().name + " = 4");
+        id[4] = (ID + SceneManager.GetActiveScene().name + " = 5");
+        id[5] = (ID + SceneManager.GetActiveScene().name + " = 6");
     }
 
     public void LoadData(GameData data)
     {
+        if(data.SavedData.TryGetValue("password", out string Id))
+        {
+            this.ID = Id;
+        } 
         if(data.SavedData.TryGetValue(id[0], out string weight1))
         {
             this.Weight[0] = weight1;
