@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class monday1 : MonoBehaviour
+public class changedays : MonoBehaviour
 {
-    public void playGame()
+    public void Change()
     {
         SceneManager.LoadScene(1);
     }
