@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MakeID : MonoBehaviour, IDataPersistence
@@ -8,6 +9,30 @@ public class MakeID : MonoBehaviour, IDataPersistence
     public string ID;
     public string day;
     public string number;
+
+    public GameObject canvas;
+    public Button button1;
+    public Button button2;
+    public Button button3;
+    public Button button4;
+    public Button button5;
+    public Button button6;
+    public Button button7;
+    public Button button8;
+    public Button button9;
+
+    public void Awake()
+    {
+        canvas = GameObject.Find("/Canvas/Buttons/Button (1)");
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "Monday") 
+        {
+            button1 = canvas.GetComponent<Button>();
+            button1.onClick.AddListener(First);
+        }
+    }
 
     public void Monday()
     {
