@@ -4,12 +4,14 @@ using UnityEngine;
  using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MakeID : MonoBehaviour, IDataPersistence
+public class MakeID : MonoBehaviour
 {
     public string ID;
     public string day;
     public string number;
 
+    [SerializeField] Datainput1 script;
+    public GameObject id;
     public GameObject canvas;
     public Button button1;
     public Button button2;
@@ -20,18 +22,41 @@ public class MakeID : MonoBehaviour, IDataPersistence
     public Button button7;
     public Button button8;
     public Button button9;
-
-    public void Awake()
+    
+    private void OnEnable()
     {
-        canvas = GameObject.Find("/Canvas/Buttons/Button (1)");
+        SceneManager.sceneLoaded += OnSceneloaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
 
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneloaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+    }
+
+    public void OnSceneloaded(Scene scene, LoadSceneMode mode)
+    {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         if (sceneName == "Monday") 
-        {
+        {   
+            canvas = GameObject.Find("/Canvas/Buttons/Button (1)");
+            
             button1 = canvas.GetComponent<Button>();
             button1.onClick.AddListener(First);
         }
+        if (sceneName == "Exercise(1)") 
+        {
+            id = GameObject.Find("/Things");
+            script = id.GetComponent<Datainput1>();
+            script.id1 = ID;
+        }
+    }
+
+    private void OnSceneUnloaded(Scene scene)
+    {
+        
     }
 
     public void Monday()
@@ -103,18 +128,5 @@ public class MakeID : MonoBehaviour, IDataPersistence
     public void Update()
     {
         ID = (day + " + " + number + " + ");
-    }
-
-    public void LoadData(GameData data)
-    {
-
-    }
-    public void SaveData(GameData data)
-    {
-        if (data.SavedData.ContainsKey("password"))
-        {
-            data.SavedData.Remove("password");
-        }
-        data.SavedData.Add("password", ID);
     }
 }

@@ -24,7 +24,7 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
 
     [SerializeField] private string[] id = new string[6];
 
-    private string ID;
+    public string id1;
 
     void Awake()
     {    
@@ -48,42 +48,31 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
         actualtext[6] = text[6].GetComponent<TextMeshProUGUI>();
         actualtext[7] = text[7].GetComponent<TextMeshProUGUI>();
         actualtext[8] = text[8].GetComponent<TextMeshProUGUI>();
-
-        id[0] = (ID + SceneManager.GetActiveScene().name + " = 1");
-        id[1] = (ID + SceneManager.GetActiveScene().name + " = 2");
-        id[2] = (ID + SceneManager.GetActiveScene().name + " = 3");
-        id[3] = (ID + SceneManager.GetActiveScene().name + " = 4");
-        id[4] = (ID + SceneManager.GetActiveScene().name + " = 5");
-        id[5] = (ID + SceneManager.GetActiveScene().name + " = 6");
     }
 
     public void LoadData(GameData data)
     {
-        if(data.SavedData.TryGetValue("password", out string Id))
-        {
-            this.ID = Id;
-        } 
-        if(data.SavedData.TryGetValue(id[0], out string weight1))
+        if(data.SavedData.TryGetValue((id1 + SceneManager.GetActiveScene().name + " + 1"), out string weight1))
         {
             this.Weight[0] = weight1;
         } 
-        if(data.SavedData.TryGetValue(id[1], out string weight2))
+        if(data.SavedData.TryGetValue((id1 + SceneManager.GetActiveScene().name + " + 2"), out string weight2))
         {
             this.Weight[1] = weight2;
         } 
-        if(data.SavedData.TryGetValue(id[2], out string weight3))
+        if(data.SavedData.TryGetValue((id1 + SceneManager.GetActiveScene().name + " + 3"), out string weight3))
         {
             this.Weight[2] = weight3;
         } 
-        if(data.SavedData.TryGetValue(id[3], out string rep1))
+        if(data.SavedData.TryGetValue((id1 + SceneManager.GetActiveScene().name + " + 4"), out string rep1))
         {
             this.Rep[0] = rep1;
         } 
-        if(data.SavedData.TryGetValue(id[4], out string rep2))
+        if(data.SavedData.TryGetValue((id1 + SceneManager.GetActiveScene().name + " + 5"), out string rep2))
         {
             this.Rep[1] = rep2;
         } 
-        if(data.SavedData.TryGetValue(id[5], out string rep3))
+        if(data.SavedData.TryGetValue((id1 + SceneManager.GetActiveScene().name + " + 6"), out string rep3))
         {
             this.Rep[2] = rep3;
         } 
@@ -91,41 +80,41 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
 
     public void SaveData(GameData data)
     {
-        if (data.SavedData.ContainsKey(id[0]))
+        if (data.SavedData.ContainsKey((id1 + SceneManager.GetActiveScene().name + " + 1")))
         {
-            data.SavedData.Remove(id[0]);
+            data.SavedData.Remove((id1 + SceneManager.GetActiveScene().name + " + 1"));
         }
-        data.SavedData.Add(id[0], Weight[0]);
+        data.SavedData.Add((id1 + SceneManager.GetActiveScene().name + " + 1"), Weight[0]);
 
-        if (data.SavedData.ContainsKey(id[1]))
+        if (data.SavedData.ContainsKey((id1 + SceneManager.GetActiveScene().name + " + 2")))
         {
-            data.SavedData.Remove(id[1]);
+            data.SavedData.Remove((id1 + SceneManager.GetActiveScene().name + " + 2"));
         }
-        data.SavedData.Add(id[1], Weight[1]);
+        data.SavedData.Add((id1 + SceneManager.GetActiveScene().name + " + 2"), Weight[1]);
 
-        if (data.SavedData.ContainsKey(id[2]))
+        if (data.SavedData.ContainsKey((id1 + SceneManager.GetActiveScene().name + " + 3")))
         {
-            data.SavedData.Remove(id[2]);
+            data.SavedData.Remove((id1 + SceneManager.GetActiveScene().name + " + 3"));
         }
-        data.SavedData.Add(id[2], Weight[2]);
+        data.SavedData.Add((id1 + SceneManager.GetActiveScene().name + " + 3"), Weight[2]);
         
-        if (data.SavedData.ContainsKey(id[3]))
+        if (data.SavedData.ContainsKey((id1 + SceneManager.GetActiveScene().name + " + 4")))
         {
-            data.SavedData.Remove(id[3]);
+            data.SavedData.Remove((id1 + SceneManager.GetActiveScene().name + " + 4"));
         }
-        data.SavedData.Add(id[3], Rep[0]);
+        data.SavedData.Add((id1 + SceneManager.GetActiveScene().name + " + 4"), Rep[0]);
 
-        if (data.SavedData.ContainsKey(id[4]))
+        if (data.SavedData.ContainsKey((id1 + SceneManager.GetActiveScene().name + " + 5")))
         {
-            data.SavedData.Remove(id[4]);
+            data.SavedData.Remove((id1 + SceneManager.GetActiveScene().name + " + 5"));
         }
-        data.SavedData.Add(id[4], Rep[1]);
+        data.SavedData.Add((id1 + SceneManager.GetActiveScene().name + " + 5"), Rep[1]);
 
-        if (data.SavedData.ContainsKey(id[5]))
+        if (data.SavedData.ContainsKey((id1 + SceneManager.GetActiveScene().name + " + 6")))
         {
-            data.SavedData.Remove(id[5]);
+            data.SavedData.Remove((id1 + SceneManager.GetActiveScene().name + " + 6"));
         }
-        data.SavedData.Add(id[5], Rep[2]);
+        data.SavedData.Add((id1 + SceneManager.GetActiveScene().name + " + 6"), Rep[2]);
     }
 
     public void Countup()
