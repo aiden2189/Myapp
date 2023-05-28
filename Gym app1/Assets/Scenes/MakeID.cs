@@ -11,7 +11,6 @@ public class MakeID : MonoBehaviour
     public string number;
 
     [SerializeField] Datainput1 script;
-    public GameObject id;
     public GameObject canvas;
     public Button button1;
     public Button button2;
@@ -39,17 +38,26 @@ public class MakeID : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (sceneName == "Monday") 
+        if (sceneName == "Homescreen")
+        {
+            canvas = GameObject.Find("/Canvas/Monday");
+
+            button1 = canvas.GetComponent<Button>();
+            button1.onClick.AddListener(Monday);
+        }
+
+        if (sceneName == "Second Screen") 
         {   
             canvas = GameObject.Find("/Canvas/Buttons/Button (1)");
             
             button1 = canvas.GetComponent<Button>();
             button1.onClick.AddListener(First);
         }
-        if (sceneName == "Exercise(1)") 
+
+        if (sceneName == "Exercise Screen") 
         {
-            id = GameObject.Find("/Things");
-            script = id.GetComponent<Datainput1>();
+            canvas = GameObject.Find("/Things");
+            script = canvas.GetComponent<Datainput1>();
             script.id1 = ID;
         }
     }
