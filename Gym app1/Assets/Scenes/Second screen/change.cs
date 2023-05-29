@@ -7,14 +7,12 @@ public class change : MonoBehaviour
 {
     public void Back()
     {
+        DataPersistenceManager.instance.SaveGame();
         SceneManager.LoadScene(1);
     }    
-    public void loadfirstbutton()
+    public void ExerciseScreen()
     {
+        DataPersistenceManager.instance.SaveGame();
         SceneManager.LoadScene(2);
-    }
-    public void loadsecondbutton()
-    {
-        SceneManager.LoadScene(3);
     }
 }

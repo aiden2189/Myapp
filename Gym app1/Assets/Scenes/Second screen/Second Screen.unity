@@ -1078,8 +1078,6 @@ GameObject:
   - component: {fileID: 642330981}
   - component: {fileID: 642330980}
   - component: {fileID: 642330979}
-  - component: {fileID: 642330978}
-  - component: {fileID: 642330977}
   m_Layer: 8
   m_Name: Button (9)
   m_TagString: Untagged
@@ -1108,31 +1106,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.5, y: -6}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &642330977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642330975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf08b17ac85a0214d95aefbbde6f659a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &642330978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642330975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27d52b0cd279c44d9e43ec6ab2722f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delete: {fileID: 1554182753}
 --- !u!114 &642330979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,8 +1150,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642330978}
-        m_TargetAssemblyTypeName: button1, Assembly-CSharp
+      - m_Target: {fileID: 1295740220}
+        m_TargetAssemblyTypeName: button, Assembly-CSharp
         m_MethodName: changebutton
         m_Mode: 1
         m_Arguments:
@@ -1189,13 +1162,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 642330977}
-        m_TargetAssemblyTypeName: firstchange, Assembly-CSharp
-        m_MethodName: loadsecondbutton
+      - m_Target: {fileID: 1295740221}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: ExerciseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1251,8 +1236,6 @@ GameObject:
   - component: {fileID: 704270317}
   - component: {fileID: 704270316}
   - component: {fileID: 704270315}
-  - component: {fileID: 704270314}
-  - component: {fileID: 704270313}
   m_Layer: 8
   m_Name: Button (8)
   m_TagString: Untagged
@@ -1281,31 +1264,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -6}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &704270313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704270311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf08b17ac85a0214d95aefbbde6f659a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &704270314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704270311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27d52b0cd279c44d9e43ec6ab2722f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delete: {fileID: 1554182753}
 --- !u!114 &704270315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1350,8 +1308,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704270314}
-        m_TargetAssemblyTypeName: button1, Assembly-CSharp
+      - m_Target: {fileID: 1295740220}
+        m_TargetAssemblyTypeName: button, Assembly-CSharp
         m_MethodName: changebutton
         m_Mode: 1
         m_Arguments:
@@ -1362,13 +1320,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 704270313}
-        m_TargetAssemblyTypeName: firstchange, Assembly-CSharp
-        m_MethodName: loadsecondbutton
+      - m_Target: {fileID: 1295740221}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: ExerciseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1717,8 +1687,6 @@ GameObject:
   - component: {fileID: 1021359892}
   - component: {fileID: 1021359891}
   - component: {fileID: 1021359890}
-  - component: {fileID: 1021359889}
-  - component: {fileID: 1021359888}
   m_Layer: 8
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1747,31 +1715,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.5, y: -2}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1021359888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021359886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf08b17ac85a0214d95aefbbde6f659a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1021359889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021359886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27d52b0cd279c44d9e43ec6ab2722f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delete: {fileID: 1554182753}
 --- !u!114 &1021359890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1816,8 +1759,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1021359889}
-        m_TargetAssemblyTypeName: button1, Assembly-CSharp
+      - m_Target: {fileID: 1295740220}
+        m_TargetAssemblyTypeName: button, Assembly-CSharp
         m_MethodName: changebutton
         m_Mode: 1
         m_Arguments:
@@ -1828,13 +1771,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1021359888}
-        m_TargetAssemblyTypeName: firstchange, Assembly-CSharp
-        m_MethodName: loadsecondbutton
+      - m_Target: {fileID: 1295740221}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: ExerciseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: firstchange, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1976,7 +1931,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: loadfirstbutton
+        m_MethodName: ExerciseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2036,74 +1991,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081803237}
   m_CullTransparentMesh: 1
---- !u!1001 &1112089477
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3479354630034061708, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_Name
-      value: DataPersistenceManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.3127317
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.986553
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 68.62912
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479354630034061710, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
---- !u!114 &1112089478 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1295562588, guid: b050435014c38dc4fb63b6270e1c03b0, type: 3}
-  m_PrefabInstance: {fileID: 1112089477}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45741ceca7bbc2a40a65afaf5ec29fd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1156686666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,12 +2209,33 @@ MonoBehaviour:
   text:
   - {fileID: 437316126}
   - {fileID: 289441051}
+  - {fileID: 483796773}
+  - {fileID: 1585960969}
+  - {fileID: 1156686666}
+  - {fileID: 766853443}
+  - {fileID: 55721809}
+  - {fileID: 1376936706}
+  - {fileID: 1715050350}
   Name:
   - 
   - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  day: 
   id:
   - 3
   - 2
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   - 1
 --- !u!1 &1376936706
 GameObject:
@@ -2562,7 +2470,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: loadsecondbutton
+        m_MethodName: ExerciseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2572,13 +2480,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1112089478}
-        m_TargetAssemblyTypeName: MakeID, Assembly-CSharp
-        m_MethodName: Second
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2634,8 +2542,6 @@ GameObject:
   - component: {fileID: 1433679160}
   - component: {fileID: 1433679159}
   - component: {fileID: 1433679158}
-  - component: {fileID: 1433679157}
-  - component: {fileID: 1433679156}
   m_Layer: 8
   m_Name: Button (4)
   m_TagString: Untagged
@@ -2664,31 +2570,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.5, y: -4}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1433679156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433679154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf08b17ac85a0214d95aefbbde6f659a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1433679157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433679154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27d52b0cd279c44d9e43ec6ab2722f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delete: {fileID: 1554182753}
 --- !u!114 &1433679158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2733,8 +2614,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433679157}
-        m_TargetAssemblyTypeName: button1, Assembly-CSharp
+      - m_Target: {fileID: 1295740220}
+        m_TargetAssemblyTypeName: button, Assembly-CSharp
         m_MethodName: changebutton
         m_Mode: 1
         m_Arguments:
@@ -2745,13 +2626,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1433679156}
-        m_TargetAssemblyTypeName: firstchange, Assembly-CSharp
-        m_MethodName: loadsecondbutton
+      - m_Target: {fileID: 1295740221}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: ExerciseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: firstchange, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2807,8 +2700,6 @@ GameObject:
   - component: {fileID: 1447798379}
   - component: {fileID: 1447798378}
   - component: {fileID: 1447798377}
-  - component: {fileID: 1447798376}
-  - component: {fileID: 1447798375}
   m_Layer: 8
   m_Name: Button (6)
   m_TagString: Untagged
@@ -2837,31 +2728,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.5, y: -4}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1447798375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447798373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf08b17ac85a0214d95aefbbde6f659a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1447798376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447798373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27d52b0cd279c44d9e43ec6ab2722f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delete: {fileID: 1554182753}
 --- !u!114 &1447798377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2906,8 +2772,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1447798376}
-        m_TargetAssemblyTypeName: button1, Assembly-CSharp
+      - m_Target: {fileID: 1295740220}
+        m_TargetAssemblyTypeName: button, Assembly-CSharp
         m_MethodName: changebutton
         m_Mode: 1
         m_Arguments:
@@ -2918,13 +2784,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1447798375}
-        m_TargetAssemblyTypeName: firstchange, Assembly-CSharp
-        m_MethodName: loadsecondbutton
+      - m_Target: {fileID: 1295740221}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: ExerciseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2980,8 +2858,6 @@ GameObject:
   - component: {fileID: 1497310522}
   - component: {fileID: 1497310521}
   - component: {fileID: 1497310520}
-  - component: {fileID: 1497310519}
-  - component: {fileID: 1497310518}
   m_Layer: 8
   m_Name: Button (5)
   m_TagString: Untagged
@@ -3010,31 +2886,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -4}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1497310518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497310516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf08b17ac85a0214d95aefbbde6f659a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1497310519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497310516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27d52b0cd279c44d9e43ec6ab2722f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delete: {fileID: 1554182753}
 --- !u!114 &1497310520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3079,8 +2930,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1497310519}
-        m_TargetAssemblyTypeName: button1, Assembly-CSharp
+      - m_Target: {fileID: 1295740220}
+        m_TargetAssemblyTypeName: button, Assembly-CSharp
         m_MethodName: changebutton
         m_Mode: 1
         m_Arguments:
@@ -3091,13 +2942,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1497310518}
-        m_TargetAssemblyTypeName: firstchange, Assembly-CSharp
-        m_MethodName: loadsecondbutton
+      - m_Target: {fileID: 1295740221}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: ExerciseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3207,7 +3070,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554182752
 GameObject:
@@ -4087,8 +3950,6 @@ GameObject:
   - component: {fileID: 1828595123}
   - component: {fileID: 1828595122}
   - component: {fileID: 1828595121}
-  - component: {fileID: 1828595120}
-  - component: {fileID: 1828595119}
   m_Layer: 8
   m_Name: Button (7)
   m_TagString: Untagged
@@ -4117,31 +3978,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.5, y: -6}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1828595119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828595117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf08b17ac85a0214d95aefbbde6f659a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1828595120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828595117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27d52b0cd279c44d9e43ec6ab2722f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delete: {fileID: 1554182753}
 --- !u!114 &1828595121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4186,8 +4022,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1828595120}
-        m_TargetAssemblyTypeName: button1, Assembly-CSharp
+      - m_Target: {fileID: 1295740220}
+        m_TargetAssemblyTypeName: button, Assembly-CSharp
         m_MethodName: changebutton
         m_Mode: 1
         m_Arguments:
@@ -4198,13 +4034,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1828595119}
-        m_TargetAssemblyTypeName: firstchange, Assembly-CSharp
-        m_MethodName: loadsecondbutton
+      - m_Target: {fileID: 1295740221}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: ExerciseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

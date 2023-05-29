@@ -10,28 +10,20 @@ public class MakeID : MonoBehaviour
     public string day;
     public string number;
 
-    [SerializeField] Datainput1 script;
+    [SerializeField] NameForButton1 script1;
+    [SerializeField] Datainput1 script2;
+    [SerializeField] UploadText1 script3;
     public GameObject canvas;
-    public Button button1;
-    public Button button2;
-    public Button button3;
-    public Button button4;
-    public Button button5;
-    public Button button6;
-    public Button button7;
-    public Button button8;
-    public Button button9;
+    public Button[] button = new Button[9];
     
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneloaded;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneloaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     public void OnSceneloaded(Scene scene, LoadSceneMode mode)
@@ -40,31 +32,44 @@ public class MakeID : MonoBehaviour
         string sceneName = currentScene.name;
         if (sceneName == "Homescreen")
         {
-            canvas = GameObject.Find("/Canvas/Monday");
+            canvas = GameObject.Find("/Canvas");
 
-            button1 = canvas.GetComponent<Button>();
-            button1.onClick.AddListener(Monday);
+            button = canvas.GetComponentsInChildren<Button>();
+            button[0].onClick.AddListener(Monday);
+            button[1].onClick.AddListener(Tuesday);
+            button[2].onClick.AddListener(Wednesday);
+            button[3].onClick.AddListener(Thursday);
+            button[4].onClick.AddListener(Friday);
+            button[5].onClick.AddListener(Saturday);
+            button[6].onClick.AddListener(Sunday);
         }
 
         if (sceneName == "Second Screen") 
         {   
-            canvas = GameObject.Find("/Canvas/Buttons/Button (1)");
-            
-            button1 = canvas.GetComponent<Button>();
-            button1.onClick.AddListener(First);
+            canvas = GameObject.Find("/Canvas/Buttons");
+            script1 = canvas.GetComponent<NameForButton1>();
+            script1.day = day;
+
+            button = canvas.GetComponentsInChildren<Button>();
+            button[0].onClick.AddListener(First);
+            button[1].onClick.AddListener(Second);
+            button[2].onClick.AddListener(Third);
+            button[3].onClick.AddListener(Forth);
+            button[4].onClick.AddListener(Fifth);
+            button[5].onClick.AddListener(Sixth);
+            button[6].onClick.AddListener(Eighth);
+            button[7].onClick.AddListener(Ninth);
         }
 
         if (sceneName == "Exercise Screen") 
         {
             canvas = GameObject.Find("/Things");
-            script = canvas.GetComponent<Datainput1>();
-            script.id1 = ID;
-        }
-    }
+            script2 = canvas.GetComponent<Datainput1>();
+            script3 = canvas.GetComponent<UploadText1>();
 
-    private void OnSceneUnloaded(Scene scene)
-    {
-        
+            script2.id2 = ID;
+            script3.id3 = ID;
+        }
     }
 
     public void Monday()
@@ -135,6 +140,6 @@ public class MakeID : MonoBehaviour
 
     public void Update()
     {
-        ID = (day + " + " + number + " + ");
+        ID = (day + " + " + number);
     }
 }

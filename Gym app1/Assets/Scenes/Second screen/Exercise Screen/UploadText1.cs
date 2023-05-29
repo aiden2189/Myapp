@@ -16,6 +16,8 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 
     public string Name;
 
+    public string id3;
+
     [SerializeField] public string id;
 
     void Awake()
@@ -25,10 +27,13 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
         UploadPlaceholder = AlwaysShowing.transform.Find("UploadText/Text Area/uploadPlaceholder").gameObject;
 
         actualtext = UploadPlaceholder.GetComponent<TextMeshProUGUI>();
-
-        id = (SceneManager.GetActiveScene().name + " = name");
     }
 
+    void Start()
+    {
+        id = (id3 + " = name");
+    }
+    
     public void Setname1()
     {
         Name = inputField.text;
