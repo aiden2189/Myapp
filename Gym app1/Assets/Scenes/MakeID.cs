@@ -69,6 +69,7 @@ public class MakeID : MonoBehaviour
 
             script2.id2 = ID;
             script3.id3 = ID;
+            
         }
     }
 

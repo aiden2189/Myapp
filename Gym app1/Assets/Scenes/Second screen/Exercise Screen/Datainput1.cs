@@ -51,15 +51,26 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
         actualtext[7] = text[7].GetComponent<TextMeshProUGUI>();
         actualtext[8] = text[8].GetComponent<TextMeshProUGUI>();
     }
-
-    void Start()
+    
+    private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneloaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneloaded;
+    }
+
+    public void OnSceneloaded(Scene scene, LoadSceneMode mode)
+    {        
         id[0] = (id2 + " + " + SceneManager.GetActiveScene().name + " + 1");
         id[1] = (id2 + " + " + SceneManager.GetActiveScene().name + " + 2");
         id[2] = (id2 + " + " + SceneManager.GetActiveScene().name + " + 3");
         id[3] = (id2 + " + " + SceneManager.GetActiveScene().name + " + 4");
         id[4] = (id2 + " + " + SceneManager.GetActiveScene().name + " + 5");
         id[5] = (id2 + " + " + SceneManager.GetActiveScene().name + " + 6");
+        DataPersistenceManager.instance.loadGame();
     }
 
     public void LoadData(GameData data)

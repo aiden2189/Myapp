@@ -42,9 +42,24 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
         id[8] = (day + " +  Ninth = name");
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneloaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneloaded;
+    }
+
+    public void OnSceneloaded(Scene scene, LoadSceneMode mode)
+    {
+        DataPersistenceManager.instance.loadGame();
+    }
+
     public void LoadData(GameData data)
     {
-        if(data.SavedData.TryGetValue((day + " + First = name"), out string name1))
+        if(data.SavedData.TryGetValue(id[0], out string name1))
         {
             this.Name[0] = name1;
         }
