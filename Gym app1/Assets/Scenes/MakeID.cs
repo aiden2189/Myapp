@@ -19,11 +19,14 @@ public class MakeID : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneloaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
+        
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneloaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     public void OnSceneloaded(Scene scene, LoadSceneMode mode)
@@ -45,7 +48,7 @@ public class MakeID : MonoBehaviour
         }
 
         if (sceneName == "Second Screen") 
-        {   
+        {  
             canvas = GameObject.Find("/Canvas/Buttons");
             script1 = canvas.GetComponent<NameForButton1>();
             script1.day = day;
@@ -71,6 +74,22 @@ public class MakeID : MonoBehaviour
             script3.id3 = ID;
             
         }
+    }
+
+    public void OnSceneUnloaded(Scene current)
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "Homescreen")
+        {
+            day = "";
+        }
+
+        if (sceneName == "Second Screen") 
+        {
+            number = "";  
+        }
+
     }
 
     public void Monday()
