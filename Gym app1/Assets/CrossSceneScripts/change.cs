@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class change : MonoBehaviour
-{
-    public void Back()
+{    
+    private int count;
+
+    public void Increase()
     {
+        count = count + 1;
         DataPersistenceManager.instance.SaveGame();
-        SceneManager.LoadScene(1);
-    }    
-    public void ExerciseScreen()
-    {
-        DataPersistenceManager.instance.SaveGame();
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(sceneBuildIndex:count);
     }
+    public void Decrease()
+    {
+        count = count - 1;
+        DataPersistenceManager.instance.SaveGame();
+        SceneManager.LoadScene(sceneBuildIndex:count);
+    }    
 }

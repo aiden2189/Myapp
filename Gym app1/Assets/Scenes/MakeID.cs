@@ -15,7 +15,7 @@ public class MakeID : MonoBehaviour
     [SerializeField] UploadText1 script3;
     public GameObject canvas;
     public Button[] button = new Button[9];
-    
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneloaded;
@@ -80,12 +80,12 @@ public class MakeID : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (sceneName == "Homescreen")
+        if (sceneName == "Second Screen")
         {
             day = "";
         }
 
-        if (sceneName == "Second Screen") 
+        if (sceneName == "Exercise Screen") 
         {
             number = "";  
         }
