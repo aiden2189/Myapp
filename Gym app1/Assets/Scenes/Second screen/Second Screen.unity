@@ -308,7 +308,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 126569832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e4cc0a1e4cd1f240888fd75dd25535c, type: 3}
+  m_Script: {fileID: 11500000, guid: bf08b17ac85a0214d95aefbbde6f659a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &126569835
@@ -356,8 +356,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 126569834}
-        m_TargetAssemblyTypeName: changedays, Assembly-CSharp
-        m_MethodName: Back
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
+        m_MethodName: Decrease
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1164,7 +1164,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: ExerciseScreen
+        m_MethodName: Increase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1322,7 +1322,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: ExerciseScreen
+        m_MethodName: Increase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1773,7 +1773,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: ExerciseScreen
+        m_MethodName: Increase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1931,7 +1931,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: ExerciseScreen
+        m_MethodName: Increase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2470,7 +2470,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: ExerciseScreen
+        m_MethodName: Increase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2628,7 +2628,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: ExerciseScreen
+        m_MethodName: Increase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2786,7 +2786,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: ExerciseScreen
+        m_MethodName: Increase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2944,7 +2944,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: ExerciseScreen
+        m_MethodName: Increase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4036,7 +4036,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1295740221}
         m_TargetAssemblyTypeName: change, Assembly-CSharp
-        m_MethodName: ExerciseScreen
+        m_MethodName: Increase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

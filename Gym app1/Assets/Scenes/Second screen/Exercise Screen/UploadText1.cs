@@ -28,12 +28,23 @@ public class UploadText1 : MonoBehaviour, IDataPersistence
 
         actualtext = UploadPlaceholder.GetComponent<TextMeshProUGUI>();
     }
+    
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneloaded;
+    }
 
-    void Start()
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneloaded;
+    }
+
+    public void OnSceneloaded(Scene scene, LoadSceneMode mode)
     {
         id = (id3 + " = name");
+        DataPersistenceManager.instance.loadGame();
     }
-    
+
     public void Setname1()
     {
         Name = inputField.text;
