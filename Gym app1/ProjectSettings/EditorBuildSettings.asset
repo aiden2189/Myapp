@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Second screen/Exercise Screen/Exercise Screen.unity
     guid: 47357fe420c34674a9f1876d77303c63
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 455ef4e16e249d04d859bd3d204f8ad3, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 25ca4dc14e2f19949a803c909fd48bd2, type: 2}

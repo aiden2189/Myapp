@@ -10,8 +10,6 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
 {
     public GameObject Screens;
 
-    private TMP_InputField[] input;
-
     public GameObject[] text = new GameObject[9];
 
     private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[9];
@@ -30,7 +28,6 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
 
     void Awake()
     {    
-        input = Screens.GetComponentsInChildren<TMP_InputField>();
         text[0] = Screens.transform.Find("Input Screen/Input Weight/Text Area/WeightText").gameObject;
         text[1] = Screens.transform.Find("Input Screen/Input Rep/Text Area/RepText").gameObject;
         text[2] = Screens.transform.Find("log Screen/Weight (1)").gameObject;
@@ -159,8 +156,6 @@ public class Datainput1 : MonoBehaviour, IDataPersistence
             Rep[2] = actualtext[1].text;
             count = 0;
         }
-        input[0].text = ("");
-        input[1].text = ("");
     }
 
     void Update()

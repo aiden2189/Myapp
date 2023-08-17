@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class NameForButton1 : MonoBehaviour, IDataPersistence
 {
-    public GameObject[] text;
+    public GameObject[] text = new GameObject[12];
 
-    private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[9];
+    private TextMeshProUGUI[] actualtext = new TextMeshProUGUI[12];
 
-    public string[] Name = new string[9];
+    public string[] Name = new string[12];
 
     public string day;
 
-    public string[] id = new string[9];
+    public string[] id = new string[12];
 
     void Awake()
     {
@@ -27,33 +27,25 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
         actualtext[6] = text[6].GetComponent<TextMeshProUGUI>();
         actualtext[7] = text[7].GetComponent<TextMeshProUGUI>();
         actualtext[8] = text[8].GetComponent<TextMeshProUGUI>();
+        actualtext[9] = text[9].GetComponent<TextMeshProUGUI>();
+        actualtext[10] = text[10].GetComponent<TextMeshProUGUI>();
+        actualtext[11] = text[11].GetComponent<TextMeshProUGUI>();
     }
     
     void Start()
     {
         id[0] = (day + " + First = name");
-        id[1] = (day + " +  Second = name");
-        id[2] = (day + " +  Third = name");
-        id[3] = (day + " +  Forth = name");
-        id[4] = (day + " +  Fifth = name");
-        id[5] = (day + " +  Sixth = name");
-        id[6] = (day + " +  Seventh = name");
-        id[7] = (day + " +  Eighth = name");
-        id[8] = (day + " +  Ninth = name");
-    }
-
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneloaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneloaded;
-    }
-
-    public void OnSceneloaded(Scene scene, LoadSceneMode mode)
-    {
+        id[1] = (day + " + Second = name");
+        id[2] = (day + " + Third = name");
+        id[3] = (day + " + Forth = name");
+        id[4] = (day + " + Fifth = name");
+        id[5] = (day + " + Sixth = name");
+        id[6] = (day + " + Seventh = name");
+        id[7] = (day + " + Eighth = name");
+        id[8] = (day + " + Ninth = name");
+        id[9] = (day + " + Tenth = name");
+        id[10] = (day + " + Eleventh = name");
+        id[11] = (day + " + Twelfth = name");
         DataPersistenceManager.instance.loadGame();
     }
 
@@ -95,6 +87,18 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
         {
             this.Name[8] = name9;
         }
+        if (data.SavedData.TryGetValue(id[9], out string name10))
+        {
+            this.Name[9] = name10;
+        }
+        if (data.SavedData.TryGetValue(id[10], out string name11))
+        {
+            this.Name[10] = name11;
+        }
+        if (data.SavedData.TryGetValue(id[11], out string name12))
+        {
+            this.Name[11] = name12;
+        }
     }
     
     public void SaveData(GameData data)
@@ -113,7 +117,11 @@ public class NameForButton1 : MonoBehaviour, IDataPersistence
         actualtext[6].text = (Name[6]);
         actualtext[7].text = (Name[7]);
         actualtext[8].text = (Name[8]);
+        actualtext[9].text = (Name[9]);
+        actualtext[10].text = (Name[10]);
+        actualtext[11].text = (Name[11]);
     }
 }
+
 
 

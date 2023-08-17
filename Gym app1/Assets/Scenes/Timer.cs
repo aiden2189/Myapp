@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
 
     public GameObject cancel;
 
+    public GameObject start1;
+
     public GameObject text1;
 
     TextMeshProUGUI actualtext1;
@@ -70,11 +72,13 @@ public class Timer : MonoBehaviour
         {
             seconds = seconds - 1 * Time.deltaTime;
             cancel.gameObject.SetActive(true);
+            start1.gameObject.SetActive(false);
         }
         else
         {
             start = false;
             cancel.gameObject.SetActive(false);
+            start1.gameObject.SetActive(true);
         }
 
         actualtext1.text = (minutes.ToString() + ": "+ seconds.ToString("F0"));
